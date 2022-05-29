@@ -1,72 +1,126 @@
 @font-face {
   font-family: "Source Sans Pro";
-  src: url(./Source_Sans_Pro/SourceSansPro-Black.ttf);
+  src: url(./fonts/Source_Sans_Pro/SourceSansPro-Black.ttf);
   font-style: normal;
   font-weight: 900;
 }
 @font-face {
   font-family: "Source Sans Pro";
-  src: url(./Source_Sans_Pro/SourceSansPro-BlackItalic.ttf);
+  src: url(./fonts/Source_Sans_Pro/SourceSansPro-BlackItalic.ttf);
   font-style: italic;
   font-weight: 900;
 }
 @font-face {
   font-family: "Source Sans Pro";
-  src: url(./Source_Sans_Pro/SourceSansPro-Bold.ttf);
+  src: url(./fonts/Source_Sans_Pro/SourceSansPro-Bold.ttf);
   font-style: normal;
   font-weight: 700;
 }
 @font-face {
   font-family: "Source Sans Pro";
-  src: url(./Source_Sans_Pro/SourceSansPro-BoldItalic.ttf);
+  src: url(./fonts/Source_Sans_Pro/SourceSansPro-BoldItalic.ttf);
   font-style: italic;
   font-weight: 700;
 }
 @font-face {
   font-family: "Source Sans Pro";
-  src: url(./Source_Sans_Pro/SourceSansPro-ExtraLight.ttf);
+  src: url(./fonts/Source_Sans_Pro/SourceSansPro-ExtraLight.ttf);
   font-style: normal;
   font-weight: 200;
 }
 @font-face {
   font-family: "Source Sans Pro";
-  src: url(./Source_Sans_Pro/SourceSansPro-ExtraLightItalic.ttf);
+  src: url(./fonts/Source_Sans_Pro/SourceSansPro-ExtraLightItalic.ttf);
   font-style: italic;
   font-weight: 200;
 }
 @font-face {
   font-family: "Source Sans Pro";
-  src: url(./Source_Sans_Pro/SourceSansPro-Italic.ttf);
+  src: url(./fonts/Source_Sans_Pro/SourceSansPro-Italic.ttf);
   font-style: italic;
   font-weight: 400;
 }
 @font-face {
   font-family: "Source Sans Pro";
-  src: url(./Source_Sans_Pro/SourceSansPro-Light.ttf);
+  src: url(./fonts/Source_Sans_Pro/SourceSansPro-Light.ttf);
   font-style: normal;
   font-weight: 300;
 }
 @font-face {
   font-family: "Source Sans Pro";
-  src: url(./Source_Sans_Pro/SourceSansPro-LightItalic.ttf);
+  src: url(./fonts/Source_Sans_Pro/SourceSansPro-LightItalic.ttf);
   font-style: italic;
   font-weight: 300;
 }
 @font-face {
   font-family: "Source Sans Pro";
-  src: url(./Source_Sans_Pro/SourceSansPro-Regular.ttf);
+  src: url(./fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf);
   font-style: normal;
   font-weight: 400;
 }
 @font-face {
   font-family: "Source Sans Pro";
-  src: url(./Source_Sans_Pro/SourceSansPro-SemiBold.ttf);
+  src: url(./fonts/Source_Sans_Pro/SourceSansPro-SemiBold.ttf);
   font-style: normal;
   font-weight: 600;
 }
 @font-face {
   font-family: "Source Sans Pro";
-  src: url(./Source_Sans_Pro/SourceSansPro-SemiBoldItalic.ttf);
+  src: url(./fonts/Source_Sans_Pro/SourceSansPro-SemiBoldItalic.ttf);
   font-style: italic;
   font-weight: 400;
+}
+@font-face {
+  font-family: "Heebo";
+  src: url(./fonts/Heebo/static/Heebo-Black.ttf);
+  font-style: normal;
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Heebo";
+  src: url(./fonts/Heebo/static/Heebo-Bold.ttf);
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Heebo";
+  src: url(./fonts/Heebo/static/Heebo-ExtraBold.ttf);
+  font-style: normal;
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Heebo";
+  src: url(./fonts/Heebo/static/Heebo-ExtraLight.ttf);
+  font-style: normal;
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Heebo";
+  src: url(./fonts/Heebo/static/Heebo-Light.ttf);
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Heebo";
+  src: url(./fonts/Heebo/static/Heebo-Medium.ttf);
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Heebo";
+  src: url(./fonts/Heebo/static/Heebo-Regular.ttf);
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Heebo";
+  src: url(./fonts/Heebo/static/Heebo-SemiBold.ttf);
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Heebo";
+  src: url(./fonts/Heebo/static/Heebo-Thin.ttf);
+  font-style: normal;
+  font-weight: 100;
 }
