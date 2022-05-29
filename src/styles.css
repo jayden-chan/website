@@ -32,6 +32,11 @@ h1 {
   padding: 0;
 }
 
+.nomargin {
+  margin: 0;
+  padding: 0;
+}
+
 h2 {
   font-weight: normal;
 }
@@ -42,6 +47,7 @@ a {
 
 .homelink {
   margin-right: 1.5mm;
+  font-size: large;
 }
 
 .root {
@@ -106,6 +112,7 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 .exprow i {
