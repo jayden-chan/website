@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Jayden Chan - Resume</title>
+    <meta name="author" content="Jayden Chan" />
+    <link rel="stylesheet" href="../font.css" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../fontawesome/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="../fontawesome/css/brands.min.css" />
+    <link rel="stylesheet" href="../fontawesome/css/solid.min.css" />
+  </head>
+
+  <body>
+    <div class="root">
+      <div class="center-h full">
+        <div class="container">
+          <h1 class="name">Jayden Chan</h1>
+          <div class="resume">
+            <div class="rescol1">
+              <h1>Experience</h1>
+
+              <div class="exp">
+                <div class="exprow">
+                  <h2><a href="https://www.dyspatch.io/">Dyspatch</a></h2>
+                  <h3>
+                    <i class="fa-solid fa-location-dot"></i>Victoria, Canada
+                  </h3>
+                </div>
+                <div class="exprow">
+                  <h4>Software Developer</h4>
+                  <h4>Sep 2021 - Apr 2022</h4>
+                </div>
+                <div class="expdesc">
+                  <ul>
+                    <li>
+                      Implemented an improved version of Dyspatch's internal
+                      one-click Kubernetes deployment &amp; monitoring tool
+                    </li>
+                    <li>
+                      Connected Rancher, GitHub, S3, DynamoDB, and Slack APIs
+                      for a cohesive and polished deployment experience
+                    </li>
+                    <li>
+                      Reverse engineered Rancher CLI to enable making Kubernetes
+                      deployments through their un-documented API
+                    </li>
+                    <li>
+                      Implemented high-availability distributed GraphQL
+                      subscriptions with Apollo and Redis
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="exp">
+                <div class="exprow">
+                  <h2><a href="https://lc.dev/">Launchcode</a></h2>
+                  <h3>
+                    <i class="fa-solid fa-location-dot"></i>Calgary, Canada
+                  </h3>
+                </div>
+                <div class="exprow">
+                  <h4>Software Developer</h4>
+                  <h4>Sep 2020 - Apr 2022</h4>
+                </div>
+                <div class="expdesc">
+                  <ul>
+                    <li>
+                      Developed core business logic for the PatronScan ID
+                      Scanner product
+                    </li>
+                    <li>
+                      Implemented a faster and more reliable ID detection
+                      algorithm using OpenCV and Rust
+                    </li>
+                    <li>
+                      Built a responsive web frontend for Launchcode's "Enjoyn"
+                      product using React &amp; Chakra
+                    </li>
+                    <li>
+                      Implemented core video and audio conferencing features for
+                      the Enjoyn Android app
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="exp">
+                <div class="exprow">
+                  <h2><a href="https://www.saasquatch.com/">SaaSquatch</a></h2>
+                  <h3>
+                    <i class="fa-solid fa-location-dot"></i>Victoria, Canada
+                  </h3>
+                </div>
+                <div class="exprow">
+                  <h4>Software Developer</h4>
+                  <h4>Jan 2019 - Apr 2020</h4>
+                </div>
+                <div class="expdesc">
+                  <ul>
+                    <li>
+                      Developed core logic for the SaaSquatch Growth Automation
+                      platform with using Express, Heroku, and Contentful
+                    </li>
+                    <li>
+                      Implemented a new frontend build process from scratch
+                      using Babel &amp; Webpack, adding TypeScript support and
+                      reducing build times from ~2 minutes to 400 ms
+                    </li>
+                    <li>
+                      Helped migrate the SaaSquatch analytics backend from Keen
+                      to BigQuery, including a custom query server to translate
+                      Keen API calls into BigQuery SQL
+                    </li>
+                    <li>
+                      Created a NodeJS command line program for compiling
+                      Gherkin specification documents into spreadsheets for
+                      manual QA
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="exp">
+                <div class="exprow">
+                  <h2>Bickert Robotics</h2>
+                  <h3>
+                    <i class="fa-solid fa-location-dot"></i>Calgary, Canada
+                  </h3>
+                </div>
+                <div class="exprow">
+                  <h4>Robotics Software Technician</h4>
+                  <h4>Apr 2018 - Sep 2018</h4>
+                </div>
+                <div class="expdesc">
+                  <ul>
+                    <li>
+                      Developed a software suite to power Bickert Robotics'
+                      automated bartender robot
+                    </li>
+                    <li>
+                      Implemented a REST API using Go and PostgreSQL for
+                      managing drink recipes, ingredients, robot configurations,
+                      and customer credentials
+                    </li>
+                    <li>
+                      Developed an Android app for directly controlling the
+                      robot using Java and the Android SDK
+                    </li>
+                    <li>
+                      Designed a web app for viewing / editing drinks, users,
+                      and tanks using React. Included page for viewing the drink
+                      queue on the robot's embedded display
+                    </li>
+                    <li>
+                      Wrote embedded Python code to receive user input and
+                      autonomously pour drinks based on JSON recipe data
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <h1>Projects</h1>
+
+              <div class="exp">
+                <div class="projrow">
+                  <h2>
+                    <a href="https://github.com/jayden-chan/puggies"
+                      >Puggies <i class="fa-brands fa-github"></i
+                    ></a>
+                  </h2>
+                  <h4>2022</h4>
+                </div>
+                <h4>Go / React</h4>
+                <ul>
+                  <li>
+                    Puggies is a self-hosted CS:GO demo analyzer and statistics
+                    platform
+                  </li>
+                  <li>
+                    Automatically parses CS:GO demos to extract statistics such
+                    as k/a/d, K/D, ADR, HS%, HLTV, RWS and many more
+                  </li>
+                  <li>
+                    Supports demos from Valve MM, FACEIT, ESEA, and pugsetup
+                  </li>
+                  <li>
+                    Uses docker-first containerized deployment method for easy
+                    setup and upgrades
+                  </li>
+                  <li>
+                    Includes a beautiful and fast interface designed with React
+                    and Chakra
+                  </li>
+                </ul>
+              </div>
+              <div class="exp">
+                <div class="projrow">
+                  <h2>
+                    <a href="https://github.com/jayden-chan/bblp"
+                      >bblp <i class="fa-brands fa-github"></i
+                    ></a>
+                  </h2>
+                  <h4>2021</h4>
+                </div>
+                <h4>Rust</h4>
+                <ul>
+                  <li>
+                    bblp is an implementation of the Revised Simplex Method for
+                    solving Linear Programs
+                  </li>
+                  <li>
+                    Uses the linear algebraic Revised Simplex Method for
+                    computing an optimal solution to a linear function and set
+                    of constraints
+                  </li>
+                  <li>
+                    Includes both primal and dual solvers with the two-phase
+                    primal-dual method for initially-infeasible problems
+                  </li>
+                  <li>
+                    Implements the largest coefficient pivoting rule with
+                    lexicographic perturbation for cycle avoidance
+                  </li>
+                </ul>
+              </div>
+              <div class="exp">
+                <div class="projrow">
+                  <h2>
+                    <a href="https://github.com/jayden-chan/nit"
+                      >nit <i class="fa-brands fa-github"></i
+                    ></a>
+                  </h2>
+                  <h4>2019</h4>
+                </div>
+                <h4>Rust</h4>
+                <ul>
+                  <li>Nit is a physically-based raytracer built with Rust</li>
+                  <li>
+                    Uses a Monte-Carlo path-tracing approach to rendering
+                    realistic scenes based on the physical properties of light
+                  </li>
+                  <li>
+                    Implements a sub-linear collision detection algorithm with a
+                    Bounding-Volume Hierarchy
+                  </li>
+                  <li>Supports loading polygon meshes from STL files</li>
+                  <li>Parallelized across any number of CPU cores</li>
+                </ul>
+              </div>
+              <div class="exp">
+                <div class="projrow">
+                  <h2>
+                    <a href="https://github.com/jayden-chan/battlesnake-2020"
+                      >Battlesnake <i class="fa-brands fa-github"></i
+                    ></a>
+                  </h2>
+                  <h4>2019 - 2020</h4>
+                </div>
+                <h4>Rust / Go</h4>
+                <ul>
+                  <li>
+                    Developed an artificial intelligence to compete in the
+                    Battlesnake programming competition
+                  </li>
+                  <li>
+                    Uses parallel Monte-Carlo Tree Search for assessing future
+                    game states
+                  </li>
+                  <li>
+                    Implemented a variety of other common algorithms for use in
+                    the Monte-Carlo rollout phase
+                  </li>
+                  <li>
+                    Created a moving-average analyzer to match other snakes'
+                    behavior to a profile
+                  </li>
+                </ul>
+              </div>
+
+              <h1>Education</h1>
+
+              <div class="exp">
+                <div class="exprow">
+                  <h2>University of Victoria</h2>
+                  <h3>Victoria, Canada</h3>
+                </div>
+                <div class="exprow">
+                  <h4>Candidate for Bachelor of Software Engineering</h4>
+                  <h4>2017 - 2022 (expected)</h4>
+                </div>
+              </div>
+
+              <h1>Awards</h1>
+
+              <div class="exp award">
+                <div class="projrow">
+                  <h2>Winner</h2>
+                  <h4>2020</h4>
+                </div>
+                <h4>Western Engineering Competition (Programming)</h4>
+              </div>
+
+              <div class="exp award">
+                <div class="projrow">
+                  <h2>Winner</h2>
+                  <h4>2018, 2019</h4>
+                </div>
+                <h4>UVic Engineering Competition (Programming)</h4>
+              </div>
+
+              <div class="exp award">
+                <div class="projrow">
+                  <h2>Winner</h2>
+                  <h4>2018</h4>
+                </div>
+                <h4>UVic ENGR 120 Design Competition</h4>
+              </div>
+
+              <div class="exp award">
+                <div class="projrow">
+                  <h2>Winner</h2>
+                  <h4>2016</h4>
+                </div>
+                <h4>Western Canada Regional Robotics Competition</h4>
+              </div>
+
+              <div class="exp award">
+                <div class="projrow">
+                  <h2>Winner</h2>
+                  <h4>2016</h4>
+                </div>
+                <h4>China Robotics Challenge</h4>
+              </div>
+
+              <div class="exp award">
+                <div class="projrow">
+                  <h2>Innovation in Control Award</h2>
+                  <h4>2015, 2016</h4>
+                </div>
+                <h4>Western Canada Regional Robotics Competition</h4>
+              </div>
+            </div>
+            <div class="rescol2">
+              <h1>Contact</h1>
+
+              <div class="contact">
+                <p>
+                  <a href="https://github.com/jayden-chan">
+                    <i class="fa-brands fa-github"></i>github.com/jayden-chan
+                  </a>
+                </p>
+                <p>
+                  <a href="mailto:jaydencn7@gmail.com"
+                    ><i class="fa-solid fa-envelope"></i>jaydencn7@gmail.com</a
+                  >
+                </p>
+                <p>
+                  <a href="https://www.linkedin.com/in/jaydencn7/"
+                    ><i class="fa-brands fa-linkedin"></i
+                    >linkedin.com/in/jaydencn7</a
+                  >
+                </p>
+                <p>
+                  <a href="https://jayden.codes"
+                    ><i class="fa-solid fa-earth-americas"></i
+                    >https://jayden.codes</a
+                  >
+                </p>
+                <p>References available upon request</p>
+              </div>
+
+              <h1>Skills</h1>
+
+              <div class="contact">
+                <div class="skillblock">
+                  <h3>Languages</h3>
+                  <p>JavaScript / TypeScript</p>
+                  <p>Rust</p>
+                  <p>C / C++</p>
+                  <p>HTML / CSS / SCSS</p>
+                  <p>Go</p>
+                </div>
+
+                <div class="skillblock">
+                  <h3>Technologies</h3>
+                  <p>React / React Native</p>
+                  <p>Docker / docker-compose</p>
+                  <p>Kubernetes / Rancher</p>
+                  <p>nginx</p>
+                  <p>PostgreSQL / MySQL / MariaDB</p>
+                  <p>REST / GraphQL</p>
+                </div>
+
+                <div class="skillblock">
+                  <h3>Tools</h3>
+                  <p>Git</p>
+                  <p>Linux</p>
+                  <p>Vim</p>
+                  <p>LaTeX</p>
+                </div>
+              </div>
+
+              <h1>Interests</h1>
+              <div class="contact">
+                <h4>Coffee / cooking</h4>
+                <p>Free Software / self-hosting</p>
+                <p>Mechanical keyboards</p>
+                <p>Gaming</p>
+                <p>Formula 1</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

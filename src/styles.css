@@ -1,0 +1,190 @@
+:root {
+  --bg-main: #101010;
+  --fg-main: #ffffff;
+  --outer-padding: 0rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-main);
+  color: var(--fg-main);
+
+  font-family: "Source Sans Pro";
+}
+
+h1 {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid white;
+}
+
+.name {
+  border: none;
+  margin-top: 0;
+  padding-bottom: 0;
+}
+
+.nametitle {
+  border: none;
+  font-size: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+a {
+  color: var(--fg-main);
+}
+
+.homelink {
+  margin-right: 1.5mm;
+}
+
+.root {
+  width: 100vw;
+  height: 100vh;
+}
+
+.full {
+  width: calc(100% - var(--outer-padding));
+  height: 100%;
+}
+
+.container {
+  /* border: 1px solid white; */
+  max-width: 68%;
+  width: 68%;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-h {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.resume {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.rescol1 {
+  margin-right: 5rem;
+  /* border: 1px solid green; */
+}
+
+.rescol2 {
+  min-width: 20%;
+  /* border: 1px solid red; */
+}
+
+.exp {
+  margin-bottom: 2rem;
+}
+
+.award {
+  margin-bottom: 1rem;
+}
+
+.exprow {
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.exprow i {
+  margin-right: 0.5rem;
+}
+
+.exp h4 {
+  margin: 1ex 0 0 0;
+  font-weight: normal;
+}
+
+.exp h3 {
+  margin: 0;
+}
+
+.exp h2 {
+  margin: 0;
+  font-weight: bold;
+}
+
+.projrow {
+  /* border: 1px solid white; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align_items: center;
+}
+
+.projrow i {
+  margin-left: 0.5rem;
+}
+
+.projrow h4 {
+  margin: 0;
+  font-weight: normal;
+}
+
+.exp a {
+  text-decoration: none;
+}
+
+.expdesc li {
+  font-weight: 300;
+  word-break: keep-all;
+  margin-bottom: 0.2rem;
+}
+
+.contact i {
+  margin-right: 0.5rem;
+}
+
+.contact p {
+  margin: 0 0 0.5rem 0;
+}
+
+.contact a {
+  text-decoration: none;
+}
+
+.contact h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+.skillblock {
+  margin-bottom: 1.5rem;
+}
+
+@media print {
+  :root {
+    --outer-padding: 1rem;
+  }
+
+  body {
+    padding: var(--outer-padding);
+  }
+
+  .container {
+    max-width: 100%;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
+}
