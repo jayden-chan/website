@@ -1,0 +1,129 @@
+title = "Linux / Vim"
+
+[[cards]]
+title = "[Linux] Archive Dev folder"
+code = """
+# Select the files to be archived
+fd . './Folder1' './Folder2' > files.txt
+
+# Perform the compression (takes a long time)
+compress dev-YYYY-MM-DD.tar.xz -T files.txt
+"""
+language = "bash"
+tags = [ "dev", "compress", "archive", "tar", "xz", "fd" ]
+
+[[cards]]
+title = "[Vim] Take a diff between splits"
+code = ":windo diffthis"
+tags = [ "vim", "diff", "splits" ]
+
+[[cards]]
+title = "[Linux] Safely disconnect external drive"
+code = """
+udisksctl unmount -b /dev/sdxn
+udisksctl power-off -b /dev/sdx
+"""
+language = "bash"
+tags = [ "hard drive", "safe", "unmount", "detach", "eject" ]
+
+[[cards]]
+title = "[Linux] Rename a user"
+language = "bash"
+code = """
+# Create a new temp account with sudo rights
+sudo adduser temp
+sudo adduser temp sudo
+
+# Log out from your current account and back in with the temp account on a new TTY
+# Rename user and home dir
+sudo usermod -l new-username -m -d /home/new-username old-username
+
+# Rename your username default's group:
+sudo groupmod -n new-username old-username
+
+# Log out from temp account and log back into your account with new-username.
+# Remove temp account
+sudo userdel -r temp
+"""
+tags = [ "linux", "user", "rename", "adduser", "usermod" ]
+
+[[cards]]
+title = "[Vim] Paste contents of macro into command line"
+code = ":ctrl-r ctrl-r <register>"
+tags = [ "vim", "macro" ]
+
+[[cards]]
+title = "[Linux] Pipe command output to clipboard"
+code = "command | xclip -selection c"
+language = "bash"
+tags = [ "linux", "clipboard", "pipe", "command" ]
+
+[[cards]]
+title = "[Linux] Convert JPGs to PDF"
+code = "convert 1.jpg 2.jpg -rotate 90 -page Letter -quality 50 out.pdf"
+language = "bash"
+tags = [ "linux", "convert", "imagemagick" ]
+
+[[cards]]
+title = "[Linux] Concatenate PDFs"
+code = "pdftk one.pdf two.pdf cat output combined.pdf"
+language = "bash"
+tags = [ "linux", "concat" ]
+
+[[cards]]
+title = "[Linux] Show disk space usage for current folder"
+code = "du -sch $(\ls -A) | sort -h"
+language = "bash"
+tags = [ "linux", "disk", "storage" ]
+
+[[cards]]
+title = "[Linux] Remap caps lock to escape"
+code = """
+xmodmap -e "clear lock"
+xmodmap -e "keysym Caps_Lock = Escape"
+"""
+language = "bash"
+tags = [ "linux", "keyboard", "xmodmap" ]
+
+[[cards]]
+title = "[Linux] Change key repeat rate and delay"
+code = "xset r rate 270 35"
+language = "bash"
+tags = [ "linux", "keyboard", "xset" ]
+
+[[cards]]
+title = "[Linux] Setting up CUPS"
+code = """
+yay -S cups
+systemctl enable org.cups.cupsd.service
+systemctl start org.cups.cupsd.service
+sudo usermod -a -G sys jayden # Prevent forbidden errors
+xdg-open http://localhost:631
+"""
+struggle = true
+language = "bash"
+tags = [ "linux", "printing", "CUPS" ]
+
+[[cards]]
+title = "[Linux] Show GPU information"
+code = "lspci -vnn | rg VGA -A 12"
+tags = [ "linux", "sysinfo" ]
+
+[[cards]]
+title = "[Vim] Retain all lines matching a pattern"
+code = """
+:v/pattern/d
+"""
+tags = [ "vim", "command", "regex" ]
+
+[[cards]]
+title = "[Vim] Delete all lines matching pattern"
+code = """
+:g/pattern/d
+"""
+tags = [ "vim", "command", "regex" ]
+
+[[cards]]
+title = "[Linux] Change the timezone"
+code = "timedatectl set-timezone Canada/Mountain"
+tags = [ "oneliners", "linux", "timedatectl" ]

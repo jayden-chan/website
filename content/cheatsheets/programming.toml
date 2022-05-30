@@ -1,0 +1,179 @@
+title = "Programming"
+
+[[cards]]
+title = "[JavaScript] Parse command line arguments & flags"
+code = """
+const args = process.argv.slice(2).filter((a) => !a.startsWith("--"));
+const flags = Object.fromEntries(
+  process.argv
+    .filter((a) => a.startsWith("--"))
+    .map((a) => {
+      const [, flag, arg] = a.match(/--(\w+)=(.*)/) ?? [
+        null,
+        a.slice(2),
+        true,
+      ];
+      return [flag, arg];
+    })
+);
+
+/**
+ * @param {string} param
+ * @param {string} deflt
+ * @returns {string}
+ */
+const getParam = (param, deflt) => flags[param] ?? deflt;
+"""
+language = "javascript"
+tags = [ "parse", "command", "arg", "get", "yarg" ]
+
+[[cards]]
+title = "[Shell] Check if variable is empty or unset"
+code = 'if [ -z "$variable" ]; then echo "blank"; else echo "not blank"; fi'
+language = "bash"
+tags = [ "shell", "variable" ]
+
+[[cards]]
+title = "[Shell] Glob pattern to array"
+code = 'my_pngs=(./folder/**/*.png)'
+language = "bash"
+tags = [ "shell", "variable", "glob", "array" ]
+
+[[cards]]
+title = "[Shell] Push to array"
+code = 'my_array+=( "$item" )'
+language = "bash"
+tags = [ "shell", "variable", "push", "append" ]
+
+[[cards]]
+title = "[Shell] Print path without extension/just file name"
+code = """
+path="/path/to/the/file.txt"
+echo ${path:h}
+# /path/to/the
+echo ${path:t}
+# file.txt
+echo ${path:r}
+# /path/to/the/file
+echo ${path:t:r}
+# file
+"""
+language = "bash"
+tags = [ "shell", "print", "variable", "ext", "path" ]
+
+[[cards]]
+title = "[Shell] Check exit code of last command"
+code = '[[ "$?" = "0" ]] && echo "Ok" || echo "fail"'
+language = "bash"
+tags = [ "shell", "variable", "exit", "status", "result", "previous" ]
+
+[[cards]]
+title = "[Shell] Iterate arguments"
+code = """
+while test $# -gt 0
+do
+    case "$1" in
+        --flag) echo "flag"
+            ;;
+        *) echo "parameter"
+            ;;
+    esac
+    shift
+done
+"""
+language = "bash"
+tags = [ "shell", "arguments", "args" ]
+
+[[cards]]
+title = "[ImageMagick] Crop"
+code = """
+convert image.png -crop <size_x>x<size_y>+<position_x>+<position_y> out.png
+"""
+language = "bash"
+tags = [ "imagemagick", "convert", "cut" ]
+
+[[cards]]
+title = "[ImageMagick] Scale"
+code = """
+convert image.png -resize 200% out.png
+"""
+language = "bash"
+tags = [ "imagemagick", "convert", "resize" ]
+
+[[cards]]
+title = "[ImageMagick] Retain pixels over a certain brightness threshold"
+code = """
+convert image.png -threshold 80% out.png
+"""
+language = "bash"
+tags = [ "imagemagick", "convert", "pixel" ]
+
+[[cards]]
+title = "[ImageMagick] Invert"
+code = """
+convert image.png -negate out.png
+"""
+language = "bash"
+tags = [ "imagemagick", "convert", "negate" ]
+
+[[cards]]
+title = "[JavaScript] Regex one-liner"
+code = """
+const [match, group1, group2, group3] = myString.match(/regex/) ?? [];
+"""
+language = "javascript"
+tags = [ "regex", "javascript", "js", "typescript", "ts" ]
+
+[[cards]]
+title = "[JavaScript] Get all regex matches"
+code = """
+const regex = /the_regex/g;
+
+let m;
+
+do {
+  m = regex.exec(str);
+  if (m) {
+    ...
+  }
+} while (m !== null);
+"""
+language = "javascript"
+tags = [ "regex", "javascript", "js", "typescript", "ts" ]
+
+[[cards]]
+title = "[Rust] Connect to a postgres db with SSL and an r2d2 connection pool"
+struggle = true
+code = """
+use openssl::ssl::{SslConnector, SslMethod};
+use postgres_openssl::MakeTlsConnector;
+use r2d2_postgres::PostgresConnectionManager;
+use std::thread;
+
+fn main() {
+    let mut builder = SslConnector::builder(SslMethod::tls()).unwrap();
+    builder.set_verify(openssl::ssl::SslVerifyMode::NONE);
+    let connector = MakeTlsConnector::new(builder.build());
+
+    let manager = PostgresConnectionManager::new(
+        "DATABASE_URL".parse().unwrap(),
+        connector,
+    );
+    let pool = r2d2::Pool::new(manager).unwrap();
+
+    let pool = pool.clone();
+    let join_handler = thread::spawn(move || {
+        println!("doing the stuff");
+        let mut client = pool.get().unwrap();
+        let results = client.query("SELECT * FROM test_data", &[]).unwrap();
+
+        println!("{:#?}", results[0].get::<usize, String>(0));
+    });
+
+    println!("waiting");
+    join_handler.join().unwrap();
+    println!("done");
+}
+"""
+language = "rust"
+tags = [ "SETTMMTOHTS", "rust", "postgres" ]
