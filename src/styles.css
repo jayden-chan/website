@@ -16,7 +16,7 @@ body {
 }
 
 h1 {
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--fg-main);
 }
 
@@ -226,7 +226,7 @@ pre {
   }
 
   .rescol2 {
-    min-width: 23%;
+    min-width: 25%;
   }
 
   .award {
