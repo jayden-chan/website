@@ -216,6 +216,10 @@ a {
 }
 
 @media only screen and (max-width: 1000px) {
+  body {
+    font-size: calc(10px + 2vmin);
+  }
+
   .container {
     max-width: 100%;
     width: 100%;
@@ -232,13 +236,7 @@ a {
   }
 
   /* don't display the interests section on mobile */
-  .interests {
-    display: none;
-  }
-
-  body {
-    font-size: calc(10px + 2vmin);
-  }
+  .interests { display: none; }
 
   .skills {
     display: flex;
