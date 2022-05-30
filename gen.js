@@ -1,7 +1,12 @@
 const { readFileSync, writeFileSync } = require("fs");
 const { join } = require("path");
+
 const resume = JSON.parse(
   readFileSync("./content/resume.json", { encoding: "utf8" })
+);
+
+const cheats = JSON.parse(
+  readFileSync("./content/cheat.json", { encoding: "utf8" })
 );
 
 const renderDir = process.argv[2] ?? "dist";
@@ -16,6 +21,14 @@ const templateReplace = (path, replacements) => {
   });
 
   writeFileSync(path, file);
+};
+
+const renderCheat = (cheat) => {
+  return `<div class="cheat">
+      <h2>${cheat.title}</h2>
+      <p>${cheat.tags.map((t) => `#${t}`).join(", ")}</p>
+      <pre>${cheat.code}</pre>
+    </div>`;
 };
 
 const renderExp = (exp) => {
@@ -91,4 +104,10 @@ templateReplace(join(renderDir, "resume", "index.html"), {
   "{{ interests }}": resume.interests
     .map((i) => `<p>${i}</p>`)
     .join("\n" + " ".repeat(16)),
+});
+
+templateReplace(join(renderDir, "cheatsheets", "index.html"), {
+  "{{ cheatsheets }}": cheats.cards
+    .map((e) => renderCheat(e))
+    .join("\n              "),
 });

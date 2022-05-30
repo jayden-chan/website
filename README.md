@@ -10,5 +10,7 @@ JavaScript.
 
 ### Dev
 ```bash
+docker compose up -d
 fd . | entr ./util.sh render
+firefox http://localhost:3000/
 ```

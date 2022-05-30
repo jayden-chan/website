@@ -1,6 +1,7 @@
 :root {
   --bg-main: #101010;
   --fg-main: #ffffff;
+  --pre-color: #ebdbb2;
   --outer-padding: 0rem;
 }
 
@@ -178,6 +179,26 @@ a {
   margin-bottom: 1.5rem;
 }
 
+.cheatcontainer {
+  max-width: 80%;
+}
+
+.cheat h2 {
+  margin: 0;
+}
+
+.cheat pre {
+  margin-bottom: 2rem;
+}
+
+.cheat p {
+  margin-top: 0;
+}
+
+pre {
+  color: var(--pre-color);
+}
+
 @media print {
   :root {
     --bg-main: #ffffff;
@@ -208,11 +229,21 @@ a {
     min-width: 23%;
   }
 
-  .award { display: none; }
-  .awards { display: none; }
-  .education { display: none; }
-  .interests { display: none; }
-  .donotprint { display: none; }
+  .award {
+    display: none;
+  }
+  .awards {
+    display: none;
+  }
+  .education {
+    display: none;
+  }
+  .interests {
+    display: none;
+  }
+  .donotprint {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -236,7 +267,9 @@ a {
   }
 
   /* don't display the interests section on mobile */
-  .interests { display: none; }
+  .interests {
+    display: none;
+  }
 
   .skills {
     display: flex;
