@@ -21,7 +21,7 @@
       <h2>[Linux] Archive Dev folder</h2>
       <p>#dev, #compress, #archive, #tar, #xz, #fd</p>
       <pre># Select the files to be archived
-fd . './Folder1' './Folder2' > files.txt
+fd . &#039;./Folder1&#039; &#039;./Folder2&#039; &gt; files.txt
 
 # Perform the compression (takes a long time)
 compress dev-YYYY-MM-DD.tar.xz -T files.txt
@@ -50,7 +50,7 @@ sudo adduser temp sudo
 # Rename user and home dir
 sudo usermod -l new-username -m -d /home/new-username old-username
 
-# Rename your username default's group:
+# Rename your username default&#039;s group:
 sudo groupmod -n new-username old-username
 
 # Log out from temp account and log back into your account with new-username.
@@ -61,7 +61,7 @@ sudo userdel -r temp
               <div class="cheat">
       <h2>[Vim] Paste contents of macro into command line</h2>
       <p>#vim, #macro</p>
-      <pre>:ctrl-r ctrl-r <register></pre>
+      <pre>:ctrl-r ctrl-r &lt;register&gt;</pre>
     </div>
               <div class="cheat">
       <h2>[Linux] Pipe command output to clipboard</h2>
@@ -86,8 +86,8 @@ sudo userdel -r temp
               <div class="cheat">
       <h2>[Linux] Remap caps lock to escape</h2>
       <p>#linux, #keyboard, #xmodmap</p>
-      <pre>xmodmap -e "clear lock"
-xmodmap -e "keysym Caps_Lock = Escape"
+      <pre>xmodmap -e &quot;clear lock&quot;
+xmodmap -e &quot;keysym Caps_Lock = Escape&quot;
 </pre>
     </div>
               <div class="cheat">
@@ -130,12 +130,12 @@ xdg-open http://localhost:631
               <div class="cheat">
       <h2>[Markdown] Image</h2>
       <p>#oneliners, #markdown, #image, #md</p>
-      <pre>![Desc](img/image.png "Desc")</pre>
+      <pre>![Desc](img/image.png &quot;Desc&quot;)</pre>
     </div>
               <div class="cheat">
       <h2>[JavaScript] Array with numbers 0..n</h2>
       <p>#oneliners, #javascript, #typescript, #js, #ts</p>
-      <pre>[...Array(n).keys()].map(e => ...)</pre>
+      <pre>[...Array(n).keys()].map(e =&gt; ...)</pre>
     </div>
               <div class="cheat">
       <h2>[Git] Show the total number of commits</h2>
@@ -143,13 +143,13 @@ xdg-open http://localhost:631
       <pre>git rev-list --count --all</pre>
     </div>
               <div class="cheat">
-      <h2>[JavaScript] Parse command line arguments & flags</h2>
+      <h2>[JavaScript] Parse command line arguments &amp; flags</h2>
       <p>#parse, #command, #arg, #get, #yarg</p>
-      <pre>const args = process.argv.slice(2).filter((a) => !a.startsWith("--"));
+      <pre>const args = process.argv.slice(2).filter((a) =&gt; !a.startsWith(&quot;--&quot;));
 const flags = Object.fromEntries(
   process.argv
-    .filter((a) => a.startsWith("--"))
-    .map((a) => {
+    .filter((a) =&gt; a.startsWith(&quot;--&quot;))
+    .map((a) =&gt; {
       const [, flag, arg] = a.match(/--(\w+)=(.*)/) ?? [
         null,
         a.slice(2),
@@ -164,13 +164,13 @@ const flags = Object.fromEntries(
  * @param {string} deflt
  * @returns {string}
  */
-const getParam = (param, deflt) => flags[param] ?? deflt;
+const getParam = (param, deflt) =&gt; flags[param] ?? deflt;
 </pre>
     </div>
               <div class="cheat">
       <h2>[Shell] Check if variable is empty or unset</h2>
       <p>#shell, #variable</p>
-      <pre>if [ -z "$variable" ]; then echo "blank"; else echo "not blank"; fi</pre>
+      <pre>if [ -z &quot;$variable&quot; ]; then echo &quot;blank&quot;; else echo &quot;not blank&quot;; fi</pre>
     </div>
               <div class="cheat">
       <h2>[Shell] Glob pattern to array</h2>
@@ -180,12 +180,12 @@ const getParam = (param, deflt) => flags[param] ?? deflt;
               <div class="cheat">
       <h2>[Shell] Push to array</h2>
       <p>#shell, #variable, #push, #append</p>
-      <pre>my_array+=( "$item" )</pre>
+      <pre>my_array+=( &quot;$item&quot; )</pre>
     </div>
               <div class="cheat">
       <h2>[Shell] Print path without extension/just file name</h2>
       <p>#shell, #print, #variable, #ext, #path</p>
-      <pre>path="/path/to/the/file.txt"
+      <pre>path=&quot;/path/to/the/file.txt&quot;
 echo ${path:h}
 # /path/to/the
 echo ${path:t}
@@ -199,17 +199,17 @@ echo ${path:t:r}
               <div class="cheat">
       <h2>[Shell] Check exit code of last command</h2>
       <p>#shell, #variable, #exit, #status, #result, #previous</p>
-      <pre>[[ "$?" = "0" ]] && echo "Ok" || echo "fail"</pre>
+      <pre>[[ &quot;$?&quot; = &quot;0&quot; ]] &amp;&amp; echo &quot;Ok&quot; || echo &quot;fail&quot;</pre>
     </div>
               <div class="cheat">
       <h2>[Shell] Iterate arguments</h2>
       <p>#shell, #arguments, #args</p>
       <pre>while test $# -gt 0
 do
-    case "$1" in
-        --flag) echo "flag"
+    case &quot;$1&quot; in
+        --flag) echo &quot;flag&quot;
             ;;
-        *) echo "parameter"
+        *) echo &quot;parameter&quot;
             ;;
     esac
     shift
@@ -219,7 +219,7 @@ done
               <div class="cheat">
       <h2>[ImageMagick] Crop</h2>
       <p>#imagemagick, #convert, #cut</p>
-      <pre>convert image.png -crop <size_x>x<size_y>+<position_x>+<position_y> out.png
+      <pre>convert image.png -crop &lt;size_x&gt;x&lt;size_y&gt;+&lt;position_x&gt;+&lt;position_y&gt; out.png
 </pre>
     </div>
               <div class="cheat">
@@ -275,23 +275,23 @@ fn main() {
     let connector = MakeTlsConnector::new(builder.build());
 
     let manager = PostgresConnectionManager::new(
-        "DATABASE_URL".parse().unwrap(),
+        &quot;DATABASE_URL&quot;.parse().unwrap(),
         connector,
     );
     let pool = r2d2::Pool::new(manager).unwrap();
 
     let pool = pool.clone();
     let join_handler = thread::spawn(move || {
-        println!("doing the stuff");
+        println!(&quot;doing the stuff&quot;);
         let mut client = pool.get().unwrap();
-        let results = client.query("SELECT * FROM test_data", &[]).unwrap();
+        let results = client.query(&quot;SELECT * FROM test_data&quot;, &amp;[]).unwrap();
 
-        println!("{:#?}", results[0].get::<usize, String>(0));
+        println!(&quot;{:#?}&quot;, results[0].get::&lt;usize, String&gt;(0));
     });
 
-    println!("waiting");
+    println!(&quot;waiting&quot;);
     join_handler.join().unwrap();
-    println!("done");
+    println!(&quot;done&quot;);
 }
 </pre>
     </div>
