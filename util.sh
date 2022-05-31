@@ -17,6 +17,7 @@ if [ "$1" = "deploy" ]; then
     git pull
     rm -rf ./*
     mv /tmp/dist/* .
+    git add --all
     git commit -m "JC: Deploy to gh-pages branch"
     git push
     rm -rf /tmp/dist
