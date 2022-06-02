@@ -145,26 +145,15 @@ xdg-open http://localhost:631
               <div class="cheat">
       <h2>[JavaScript] Parse command line arguments &amp; flags</h2>
       <p>#parse, #command, #arg, #get, #yarg</p>
-      <pre>const args = process.argv.slice(2).filter((a) =&gt; !a.startsWith(&quot;--&quot;));
+      <pre>const args = process.argv.slice(2).filter((a) =&gt; !a.startsWith(&quot;-&quot;));
 const flags = Object.fromEntries(
   process.argv
-    .filter((a) =&gt; a.startsWith(&quot;--&quot;))
     .map((a) =&gt; {
-      const [, flag, arg] = a.match(/--(\w+)=(.*)/) ?? [
-        null,
-        a.slice(2),
-        true,
-      ];
-      return [flag, arg];
+      const [didMatch, flag, arg] = a.match(/--?(\w+)(?:=(.*))?/) ?? [];
+      return didMatch !== undefined ? [flag, arg ?? true] : undefined;
     })
+    .filter((f) =&gt; f !== undefined)
 );
-
-/**
- * @param {string} param
- * @param {string} deflt
- * @returns {string}
- */
-const getParam = (param, deflt) =&gt; flags[param] ?? deflt;
 </pre>
     </div>
               <div class="cheat">
