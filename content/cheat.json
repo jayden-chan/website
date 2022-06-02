@@ -108,7 +108,7 @@
       "title": "[Git] Show the total number of commits"
     },
     {
-      "code": "const args = process.argv.slice(2).filter((a) => !a.startsWith(\"--\"));\nconst flags = Object.fromEntries(\n  process.argv\n    .filter((a) => a.startsWith(\"--\"))\n    .map((a) => {\n      const [, flag, arg] = a.match(/--(\\w+)=(.*)/) ?? [\n        null,\n        a.slice(2),\n        true,\n      ];\n      return [flag, arg];\n    })\n);\n\n/**\n * @param {string} param\n * @param {string} deflt\n * @returns {string}\n */\nconst getParam = (param, deflt) => flags[param] ?? deflt;\n",
+      "code": "const args = process.argv.slice(2).filter((a) => !a.startsWith(\"-\"));\nconst flags = Object.fromEntries(\n  process.argv\n    .map((a) => {\n      const [didMatch, flag, arg] = a.match(/--?(\\w+)(?:=(.*))?/) ?? [];\n      return didMatch !== undefined ? [flag, arg ?? true] : undefined;\n    })\n    .filter((f) => f !== undefined)\n);\n",
       "language": "javascript",
       "tags": ["parse", "command", "arg", "get", "yarg"],
       "title": "[JavaScript] Parse command line arguments & flags"
