@@ -46,6 +46,15 @@
   ],
   "experience": [
     {
+      "company": "SaaSquatch",
+      "location": "Victoria, Canada",
+      "print": true,
+      "roles": ["Working on infrastructure, DevOps, and backend teams"],
+      "time": "Aug 2022 - present",
+      "title": "Software Engineer",
+      "website": "https://www.saasquatch.com"
+    },
+    {
       "company": "Dyspatch",
       "location": "Victoria, Canada",
       "print": true,
@@ -74,7 +83,7 @@
       "website": "https://lc.dev"
     },
     {
-      "company": "Referral SaaSquatch",
+      "company": "SaaSquatch",
       "location": "Victoria, Canada",
       "print": true,
       "roles": [
@@ -105,71 +114,85 @@
   ],
   "projects": [
     {
+      "github": "pipewire-orchestrator",
+      "print": true,
+      "stack": "TypeScript",
+      "time": "2022",
+      "title": "PipeWire Orchestrator",
+      "roles": [
+        "PipeWire Orchestrator is a background daemon that performs several audio and MIDI-related tasks on Linux",
+        "Performs MIDI processing and mapping based on configuration rules",
+        "Provides PipeWire connection graph monitoring tools and rules",
+        "Implements basic JACK LV2 plugin host functionality",
+        "Configured with either JSON or YAML including automatic runtime validation"
+      ]
+    },
+    {
       "github": "puggies",
       "print": true,
+      "stack": "Go / React",
+      "time": "2022",
+      "title": "puggies",
       "roles": [
         "Puggies is a self-hosted CS:GO demo analyzer and statistics platform",
         "Automatically parses CS:GO demos to extract statistics such as k/a/d, K/D, ADR, HS%, HLTV, RWS and many more",
         "Supports demos from Valve MM, FACEIT, ESEA, and pugsetup",
         "Uses docker-first containerized deployment method for easy setup and upgrades",
         "Includes a beautiful and fast interface designed with React and Chakra"
-      ],
-      "stack": "Go / React",
-      "time": "2022",
-      "title": "puggies"
+      ]
     },
     {
       "github": "bblp",
       "print": true,
+      "stack": "Rust",
+      "time": "2021",
+      "title": "bblp",
       "roles": [
         "bblp is an implementation of the Revised Simplex Method for solving Linear Programs",
         "Uses the linear algebraic Revised Simplex Method for computing an optimal solution to a linear function and set of constraints",
         "Includes both primal and dual solvers with the two-phase primal-dual method for initially-infeasible problems",
         "Implements the largest coefficient pivoting rule with lexicographic perturbation for cycle avoidance"
-      ],
-      "stack": "Rust",
-      "time": "2021",
-      "title": "bblp"
+      ]
     },
     {
       "github": "nit",
       "print": true,
+      "stack": "Rust",
+      "time": "2019",
+      "title": "nit",
       "roles": [
         "Nit is a physically-based raytracer built with Rust",
         "Uses a Monte-Carlo path-tracing approach to rendering realistic scenes based on the physical properties of light",
         "Implements a sub-linear collision detection algorithm with a Bounding-Volume Hierarchy",
         "Supports loading polygon meshes from STL files",
         "Parallelized across any number of CPU cores"
-      ],
-      "stack": "Rust",
-      "time": "2019",
-      "title": "nit"
+      ]
     },
     {
       "github": "battlesnake-2020",
-      "print": true,
+      "print": false,
+      "stack": "Rust / Go",
+      "time": "2019-2020",
+      "title": "Battlesnake",
       "roles": [
         "Developed an artificial intelligence to compete in the Battlesnake programming competition",
         "Uses parallel Monte-Carlo Tree Search for assessing future game states",
         "Implemented a variety of other common algorithms for use in the Monte-Carlo rollout phase",
         "Created a moving-average analyzer to match other snakes' behavior to a profile"
-      ],
-      "stack": "Rust / Go",
-      "time": "2019-2020",
-      "title": "Battlesnake"
+      ]
     },
     {
+      "title": "UVic ENGR 120 Design Project",
       "github": "ENGR120-Vex",
+      "time": "2018",
+      "stack": "C",
       "print": false,
       "roles": [
         "Designed and built a small prototype robot for connecting wires on the ocean floor",
         "Created and programmed a rotating photosensor mechanism to detect the attachment point",
         "Implemented PID and slew rate controllers for quickly and smoothly driving to the attachment point",
         "Placed 1st in a course-wide competition with an average connection time of 5.99 seconds"
-      ],
-      "stack": "C",
-      "time": "2018",
-      "title": "UVic ENGR 120 Design Project"
+      ]
     }
   ],
   "skills": {

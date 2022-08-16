@@ -2,7 +2,7 @@
 
 if [ "$1" = "render" ]; then
     echo "rendering website"
-    rm -rf ./dist/*
+    rm -rf ./dist
     mkdir -p dist
     cp -r src/* dist
     node --unhandled-rejections=strict gen.js dist
