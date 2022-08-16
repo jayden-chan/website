@@ -8,6 +8,14 @@ if [ "$1" = "render" ]; then
     node --unhandled-rejections=strict gen.js dist
 fi
 
+if [ "$1" = "dev" ]; then
+    fd . src content | entr ./util.sh render
+fi
+
+if [ "$1" = "serve" ]; then
+    python -m http.server 3000 --directory dist
+fi
+
 if [ "$1" = "deploy" ]; then
     echo "rendering website"
     mkdir -p /tmp/dist
