@@ -1,6 +1,12 @@
 {
   "cards": [
     {
+      "code": "ffmpeg -ss hh:mm:ss -i input.mp4 -t hh:mm:ss (clip length) output.mp4",
+      "langage": "bash",
+      "tags": ["ffmpeg", "clip", "cut", "video"],
+      "title": "[Linux] Cut video clip with ffmpeg"
+    },
+    {
       "code": "# Select the files to be archived\nfd . './Folder1' './Folder2' > files.txt\n\n# Perform the compression (takes a long time)\ncompress dev-YYYY-MM-DD.tar.xz -T files.txt\n",
       "language": "bash",
       "tags": ["dev", "compress", "archive", "tar", "xz", "fd"],
