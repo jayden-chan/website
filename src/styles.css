@@ -178,22 +178,6 @@ a {
   margin-bottom: 1.5rem;
 }
 
-.cheatcontainer {
-  max-width: 80%;
-}
-
-.cheat h2 {
-  margin: 0;
-}
-
-.cheat pre {
-  margin-bottom: 2rem;
-}
-
-.cheat p {
-  margin-top: 0;
-}
-
 pre {
   color: var(--pre-color);
 }
