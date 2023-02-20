@@ -1,7 +1,7 @@
 :root {
   --bg-main: #101010;
   --fg-main: #ffffff;
-  --pre-color: #ebdbb2;
+  --pre-color: #dadada;
   --outer-padding: 0rem;
 }
 
@@ -69,7 +69,7 @@ a {
 
 .center {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -79,6 +79,11 @@ a {
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
+}
+
+.mv1 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .resume {
@@ -186,6 +191,7 @@ pre {
   :root {
     --bg-main: #ffffff;
     --fg-main: #000000;
+    --pre-color: #000000;
     --outer-padding: 1rem;
   }
 
