@@ -1,0 +1,5 @@
+procs:
+  render:
+    cmd: ["./util.sh", "dev"]
+  serve:
+    cmd: ["./util.sh", "serve"]

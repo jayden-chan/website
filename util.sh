@@ -9,7 +9,7 @@ if [ "$1" = "render" ]; then
 fi
 
 if [ "$1" = "dev" ]; then
-    fd . src content | entr ./util.sh render
+    while sleep 0.1; do fd . src content | entr -d ./util.sh render; done
 fi
 
 if [ "$1" = "serve" ]; then
