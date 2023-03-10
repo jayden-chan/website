@@ -33,6 +33,7 @@ const renderExp = (exp) => {
     console.error(exp);
     throw new Error("undef");
   }
+
   const companyName =
     exp.website !== undefined
       ? `<a href="${e(exp.website)}">${e(exp.company)}</a>`

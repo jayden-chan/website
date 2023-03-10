@@ -2,17 +2,17 @@
 
 function render_website () {
     echo "[$(date)] Rendering website"
-    rm -rf ./dist
-    mkdir -p dist/fontawesome
-    cp -r ./src/* dist
-    cp -r ./vendor/fa/* dist/fontawesome/
+    rm -rf "$1"
+    mkdir -p "$1"/fontawesome
+    cp -r ./src/* "$1"
+    cp -r ./vendor/fa/* "$1"/fontawesome/
     node --unhandled-rejections=strict gen.js "$1"
-    purgecss --css ./dist/fontawesome/css/*.css --content ./dist/**/*.html --output ./dist/fontawesome/css/
-    purgecss --css ./dist/styles/*.css          --content ./dist/**/*.html --output ./dist/styles/
+    purgecss --css "$1"/fontawesome/css/*.css --content "$1"/**/*.html --output "$1"/fontawesome/css/
+    purgecss --css "$1"/styles/*.css          --content "$1"/**/*.html --output "$1"/styles/
 }
 
 if [ "$1" = "render" ]; then
-    render_website dist
+    render_website ./dist
 fi
 
 if [ "$1" = "dev" ]; then
@@ -24,15 +24,16 @@ if [ "$1" = "serve" ]; then
 fi
 
 if [ "$1" = "deploy" ]; then
+    set -e
     echo "Deploying website"
-    render_website /tmp/dist
+    render_website /tmp/website
     git checkout pages
     git pull
     rm -rf ./*
-    mv /tmp/dist/* .
+    mv /tmp/website/* .
     git add --all
     git commit -m "JC: Deploy to gh-pages branch"
     git push
-    rm -rf /tmp/dist
+    rm -rf /tmp/website
     git checkout master
 fi
