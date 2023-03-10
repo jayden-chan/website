@@ -1,7 +1,7 @@
 {
   "interests": [
-    "Coffee / cooking",
     "Free Software / self-hosting",
+    "Coffee / cooking",
     "Mechanical keyboards",
     "Gaming",
     "Formula 1"
@@ -49,8 +49,14 @@
       "company": "SaaSquatch",
       "location": "Victoria, Canada",
       "print": true,
-      "roles": ["Working on infrastructure, DevOps, and backend teams"],
-      "time": "Aug 2022 - present",
+      "roles": [
+        "Currently working on backend, infrastructure, and DevOps teams",
+        "Spearheaded the adoption of containerization technology at SaaSquatch, specifically Docker and Kubernetes (GKE)",
+        "Developed core logic for the SaaSquatch Growth Automation platform with using Express, Heroku, and Contentful",
+        "Implemented a new frontend build process from scratch using Babel & Webpack, adding TypeScript support and cutting build times in half",
+        "Helped migrate the SaaSquatch analytics backend from Keen to BigQuery, including a custom query server to translate Keen API calls into BigQuery SQL"
+      ],
+      "time": "Jan 2019 - Apr 2020, Aug 2022 - present",
       "title": "Software Engineer",
       "website": "https://www.saasquatch.com"
     },
@@ -83,20 +89,6 @@
       "website": "https://lc.dev"
     },
     {
-      "company": "SaaSquatch",
-      "location": "Victoria, Canada",
-      "print": true,
-      "roles": [
-        "Developed core logic for the SaaSquatch Growth Automation platform with using Express, Heroku, and Contentful",
-        "Implemented a new frontend build process from scratch using Babel & Webpack, adding TypeScript support and reducing build times from ~2 minutes to 400 ms",
-        "Helped migrate the SaaSquatch analytics backend from Keen to BigQuery, including a custom query server to translate Keen API calls into BigQuery SQL",
-        "Created a NodeJS command line program for compiling Gherkin specification documents into spreadsheets for manual QA"
-      ],
-      "time": "Jan 2019 - Apr 2020",
-      "title": "Software Developer",
-      "website": "https://www.saasquatch.com"
-    },
-    {
       "company": "Bickert Robotics",
       "location": "Calgary, Canada",
       "print": false,
@@ -108,8 +100,7 @@
         "Wrote embedded Python code to receive user input and autonomously pour drinks based on JSON recipe data"
       ],
       "time": "Apr 2018 - Sep 2018",
-      "title": "Robotics Software Technician",
-      "website": "https://bickertrobotics.com"
+      "title": "Robotics Software Technician"
     }
   ],
   "projects": [
@@ -197,20 +188,20 @@
   ],
   "skills": {
     "lang": [
-      "JavaScript / TypeScript",
+      "TypeScript / JavaScript",
+      "Go",
       "Rust",
       "C / C++",
-      "HTML / CSS / SCSS",
-      "Go"
+      "HTML / CSS / SCSS"
     ],
     "tech": [
+      "Kubernetes / Docker",
+      "Helm / Kustomize / FluxCD",
       "React / React Native",
-      "Docker / docker-compose",
-      "Kubernetes / Rancher",
-      "nginx",
-      "PostgreSQL / MySQL / MariaDB",
+      "NGINX",
+      "PostgreSQL",
       "REST / GraphQL"
     ],
-    "tools": ["Git", "Linux", "Vim", "LaTeX"]
+    "tools": ["Git", "Linux", "Vim / Neovim / Tmux", "LaTeX"]
   }
 }

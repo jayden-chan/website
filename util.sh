@@ -1,11 +1,18 @@
 #!/bin/zsh
 
-if [ "$1" = "render" ]; then
-    echo "rendering website"
+function render_website () {
+    echo "[$(date)] Rendering website"
     rm -rf ./dist
-    mkdir -p dist
-    cp -r src/* dist
-    node --unhandled-rejections=strict gen.js dist
+    mkdir -p dist/fontawesome
+    cp -r ./src/* dist
+    cp -r ./vendor/fa/* dist/fontawesome/
+    node --unhandled-rejections=strict gen.js "$1"
+    purgecss --css ./dist/fontawesome/css/*.css --content ./dist/**/*.html --output ./dist/fontawesome/css/
+    purgecss --css ./dist/styles/*.css          --content ./dist/**/*.html --output ./dist/styles/
+}
+
+if [ "$1" = "render" ]; then
+    render_website dist
 fi
 
 if [ "$1" = "dev" ]; then
@@ -17,10 +24,8 @@ if [ "$1" = "serve" ]; then
 fi
 
 if [ "$1" = "deploy" ]; then
-    echo "rendering website"
-    mkdir -p /tmp/dist
-    cp -r src/* /tmp/dist
-    node --unhandled-rejections=strict gen.js /tmp/dist
+    echo "Deploying website"
+    render_website /tmp/dist
     git checkout pages
     git pull
     rm -rf ./*

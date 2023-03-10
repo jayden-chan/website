@@ -33,10 +33,15 @@ const renderExp = (exp) => {
     console.error(exp);
     throw new Error("undef");
   }
+  const companyName =
+    exp.website !== undefined
+      ? `<a href="${e(exp.website)}">${e(exp.company)}</a>`
+      : e(exp.company);
+
   return `<div class="exp${exp.print ? "" : " donotprint"}">
                 <div class="exprow">
-                  <h2><a href="${e(exp.website)}">${e(exp.company)}</a></h2>
-                  <h3>
+                  <h2>${companyName}</h2>
+                  <h3 class="nomobile">
                     <i class="fa-solid fa-location-dot"></i>${e(exp.location)}
                   </h3>
                 </div>
@@ -60,7 +65,7 @@ const renderProject = (proj) => {
                       >${e(proj.title)} <i class="fa-brands fa-github"></i
                     ></a>
                   </h2>
-                  <h4>${e(proj.time)}</h4>
+                  <h3>${e(proj.time)}</h3>
                 </div>
                 <h4>${e(proj.stack)}</h4>
                 <ul>
@@ -73,7 +78,7 @@ const renderAward = (award) => {
   return `<div class="exp award">
                 <div class="projrow">
                   <h2>${e(award.result)}</h2>
-                  <h4>${e(award.time)}</h4>
+                  <h3>${e(award.time)}</h3>
                 </div>
                 <h4>${e(award.desc)}</h4>
               </div>`;
