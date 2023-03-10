@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "Heebo";
+  src: local("Heebo"), url(/fonts/Heebo/static/Heebo-Black.ttf);
+  font-style: normal;
+  font-display: swap;
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Heebo";
+  src: local("Heebo-Bold"), local("Heebo Bold"),
+    url(/fonts/Heebo/static/Heebo-Bold.ttf);
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Heebo";
+  src: local("Heebo-ExtraBold"), local("Heebo ExtraBold"),
+    url(/fonts/Heebo/static/Heebo-ExtraBold.ttf);
+  font-style: normal;
+  font-display: swap;
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Heebo";
+  src: local("Heebo-ExtraLight"), local("Heebo ExtraLight"),
+    url(/fonts/Heebo/static/Heebo-ExtraLight.ttf);
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Heebo";
+  src: local("Heebo-Light"), local("Heebo Light"),
+    url(/fonts/Heebo/static/Heebo-Light.ttf);
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Heebo";
+  src: local("Heebo-Medium"), local("Heebo Medium"),
+    url(/fonts/Heebo/static/Heebo-Medium.ttf);
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Heebo";
+  src: local("Heebo-Regular"), local("Heebo Regular"),
+    url(/fonts/Heebo/static/Heebo-Regular.ttf);
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Heebo";
+  src: local("Heebo-SemiBold"), local("Heebo SemiBold"),
+    url(/fonts/Heebo/static/Heebo-SemiBold.ttf);
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Heebo";
+  src: local("Heebo-Thin"), local("Heebo Thin"),
+    url(/fonts/Heebo/static/Heebo-Thin.ttf);
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100;
+}

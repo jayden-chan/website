@@ -1,0 +1,67 @@
+:root {
+  --bg-main: #ffffff;
+  --fg-main: #000000;
+  --pre-color: #000000;
+  --outer-padding: 1rem;
+}
+
+body {
+  padding: var(--outer-padding);
+  font-size: 15px;
+}
+
+.full {
+  width: calc(100% - (var(--outer-padding)));
+  padding: calc(var(--outer-padding) / 2);
+}
+
+.project {
+  margin-bottom: 1rem;
+}
+
+.container {
+  max-width: 100%;
+  padding-top: 1rem;
+}
+
+.rescol1 {
+  margin-right: 1rem;
+}
+
+.rescol2 {
+  min-width: 25%;
+}
+
+.expdesc ul {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.expdesc ul li {
+  margin-left: 1em;
+}
+
+.project ul {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.project ul li {
+  margin-left: 1em;
+}
+
+.award {
+  display: none;
+}
+.awards {
+  display: none;
+}
+.education {
+  display: none;
+}
+.interests {
+  display: none;
+}
+.donotprint {
+  display: none;
+}

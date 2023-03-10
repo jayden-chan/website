@@ -5,11 +5,29 @@
 
     <title>Jayden Chan - Resume</title>
     <meta name="author" content="Jayden Chan" />
-    <link rel="stylesheet" href="../font.css" />
-    <link rel="stylesheet" href="../styles.css" />
-    <link rel="stylesheet" href="../fontawesome/css/fontawesome.min.css" />
-    <link rel="stylesheet" href="../fontawesome/css/brands.min.css" />
-    <link rel="stylesheet" href="../fontawesome/css/solid.min.css" />
+    <meta name="description" content="Resume - Jayden Chan" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="/styles/font.css" />
+    <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="stylesheet" href="/styles/print.css" media="print" />
+    <link
+      rel="stylesheet"
+      href="/styles/lg.css"
+      media="only screen and (max-width: 1500px)"
+    />
+    <link
+      rel="stylesheet"
+      href="/styles/md.css"
+      media="only screen and (max-width: 1200px)"
+    />
+    <link
+      rel="stylesheet"
+      href="/styles/sm.css"
+      media="only screen and (max-width: 1000px)"
+    />
+    <link rel="stylesheet" href="/fontawesome/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="/fontawesome/css/brands.min.css" />
+    <link rel="stylesheet" href="/fontawesome/css/solid.min.css" />
   </head>
 
   <body>
@@ -24,24 +42,28 @@
               <div class="exp">
                 <div class="exprow">
                   <h2><a href="https://www.saasquatch.com">SaaSquatch</a></h2>
-                  <h3>
+                  <h3 class="nomobile">
                     <i class="fa-solid fa-location-dot"></i>Victoria, Canada
                   </h3>
                 </div>
                 <div class="exprow">
                   <h4>Software Engineer</h4>
-                  <h4>Aug 2022 - present</h4>
+                  <h4>Jan 2019 - Apr 2020, Aug 2022 - present</h4>
                 </div>
                 <div class="expdesc">
                   <ul>
-                    <li>Working on infrastructure, DevOps, and backend teams</li>
+                    <li>Currently working on backend, infrastructure, and DevOps teams</li>
+                    <li>Spearheaded the adoption of containerization technology at SaaSquatch, specifically Docker and Kubernetes (GKE)</li>
+                    <li>Developed core logic for the SaaSquatch Growth Automation platform with using Express, Heroku, and Contentful</li>
+                    <li>Implemented a new frontend build process from scratch using Babel &amp; Webpack, adding TypeScript support and cutting build times in half</li>
+                    <li>Helped migrate the SaaSquatch analytics backend from Keen to BigQuery, including a custom query server to translate Keen API calls into BigQuery SQL</li>
                   </ul>
                 </div>
               </div>
               <div class="exp">
                 <div class="exprow">
                   <h2><a href="https://www.dyspatch.io/">Dyspatch</a></h2>
-                  <h3>
+                  <h3 class="nomobile">
                     <i class="fa-solid fa-location-dot"></i>Victoria, Canada
                   </h3>
                 </div>
@@ -61,7 +83,7 @@
               <div class="exp">
                 <div class="exprow">
                   <h2><a href="https://lc.dev">Launchcode</a></h2>
-                  <h3>
+                  <h3 class="nomobile">
                     <i class="fa-solid fa-location-dot"></i>Calgary, Canada
                   </h3>
                 </div>
@@ -78,30 +100,10 @@
                   </ul>
                 </div>
               </div>
-              <div class="exp">
-                <div class="exprow">
-                  <h2><a href="https://www.saasquatch.com">SaaSquatch</a></h2>
-                  <h3>
-                    <i class="fa-solid fa-location-dot"></i>Victoria, Canada
-                  </h3>
-                </div>
-                <div class="exprow">
-                  <h4>Software Developer</h4>
-                  <h4>Jan 2019 - Apr 2020</h4>
-                </div>
-                <div class="expdesc">
-                  <ul>
-                    <li>Developed core logic for the SaaSquatch Growth Automation platform with using Express, Heroku, and Contentful</li>
-                    <li>Implemented a new frontend build process from scratch using Babel &amp; Webpack, adding TypeScript support and reducing build times from ~2 minutes to 400 ms</li>
-                    <li>Helped migrate the SaaSquatch analytics backend from Keen to BigQuery, including a custom query server to translate Keen API calls into BigQuery SQL</li>
-                    <li>Created a NodeJS command line program for compiling Gherkin specification documents into spreadsheets for manual QA</li>
-                  </ul>
-                </div>
-              </div>
               <div class="exp donotprint">
                 <div class="exprow">
-                  <h2><a href="https://bickertrobotics.com">Bickert Robotics</a></h2>
-                  <h3>
+                  <h2>Bickert Robotics</h2>
+                  <h3 class="nomobile">
                     <i class="fa-solid fa-location-dot"></i>Calgary, Canada
                   </h3>
                 </div>
@@ -129,7 +131,7 @@
                       >PipeWire Orchestrator <i class="fa-brands fa-github"></i
                     ></a>
                   </h2>
-                  <h4>2022</h4>
+                  <h3>2022</h3>
                 </div>
                 <h4>TypeScript</h4>
                 <ul>
@@ -147,7 +149,7 @@
                       >puggies <i class="fa-brands fa-github"></i
                     ></a>
                   </h2>
-                  <h4>2022</h4>
+                  <h3>2022</h3>
                 </div>
                 <h4>Go / React</h4>
                 <ul>
@@ -165,7 +167,7 @@
                       >bblp <i class="fa-brands fa-github"></i
                     ></a>
                   </h2>
-                  <h4>2021</h4>
+                  <h3>2021</h3>
                 </div>
                 <h4>Rust</h4>
                 <ul>
@@ -182,7 +184,7 @@
                       >nit <i class="fa-brands fa-github"></i
                     ></a>
                   </h2>
-                  <h4>2019</h4>
+                  <h3>2019</h3>
                 </div>
                 <h4>Rust</h4>
                 <ul>
@@ -200,7 +202,7 @@
                       >Battlesnake <i class="fa-brands fa-github"></i
                     ></a>
                   </h2>
-                  <h4>2019-2020</h4>
+                  <h3>2019-2020</h3>
                 </div>
                 <h4>Rust / Go</h4>
                 <ul>
@@ -217,7 +219,7 @@
                       >UVic ENGR 120 Design Project <i class="fa-brands fa-github"></i
                     ></a>
                   </h2>
-                  <h4>2018</h4>
+                  <h3>2018</h3>
                 </div>
                 <h4>C</h4>
                 <ul>
@@ -246,42 +248,42 @@
               <div class="exp award">
                 <div class="projrow">
                   <h2>Winner</h2>
-                  <h4>2020</h4>
+                  <h3>2020</h3>
                 </div>
                 <h4>Western Engineering Competition (Programming)</h4>
               </div>
               <div class="exp award">
                 <div class="projrow">
                   <h2>Winner</h2>
-                  <h4>2018, 2019</h4>
+                  <h3>2018, 2019</h3>
                 </div>
                 <h4>UVic Engineering Competition (Programming)</h4>
               </div>
               <div class="exp award">
                 <div class="projrow">
                   <h2>Winner</h2>
-                  <h4>2018</h4>
+                  <h3>2018</h3>
                 </div>
                 <h4>UVic ENGR 120 Design Competition</h4>
               </div>
               <div class="exp award">
                 <div class="projrow">
                   <h2>Winner</h2>
-                  <h4>2016</h4>
+                  <h3>2016</h3>
                 </div>
                 <h4>Western Canada Regional Robotics Competition</h4>
               </div>
               <div class="exp award">
                 <div class="projrow">
                   <h2>Winner</h2>
-                  <h4>2016</h4>
+                  <h3>2016</h3>
                 </div>
                 <h4>China Robotics Challenge</h4>
               </div>
               <div class="exp award">
                 <div class="projrow">
                   <h2>Innovation in Control Award</h2>
-                  <h4>2015, 2016</h4>
+                  <h3>2015, 2016</h3>
                 </div>
                 <h4>Western Canada Regional Robotics Competition</h4>
               </div>
@@ -314,43 +316,42 @@
                     https://jayden.codes
                   </a>
                 </p>
-                <p>References available upon request</p>
               </div>
 
               <h1>Skills</h1>
 
               <div class="contact skills">
                 <div class="skillblock">
-                  <h3>Languages</h3>
-                  <p>JavaScript / TypeScript</p>
+                  <h2>Languages</h2>
+                  <p>TypeScript / JavaScript</p>
+                  <p>Go</p>
                   <p>Rust</p>
                   <p>C / C++</p>
                   <p>HTML / CSS / SCSS</p>
-                  <p>Go</p>
                 </div>
 
                 <div class="skillblock">
-                  <h3>Technologies</h3>
+                  <h2>Technologies</h2>
+                  <p>Kubernetes / Docker</p>
+                  <p>Helm / Kustomize / FluxCD</p>
                   <p>React / React Native</p>
-                  <p>Docker / docker-compose</p>
-                  <p>Kubernetes / Rancher</p>
-                  <p>nginx</p>
-                  <p>PostgreSQL / MySQL / MariaDB</p>
+                  <p>NGINX</p>
+                  <p>PostgreSQL</p>
                   <p>REST / GraphQL</p>
                 </div>
 
                 <div class="skillblock">
-                  <h3>Tools</h3>
+                  <h2>Tools</h2>
                   <p>Git</p>
                   <p>Linux</p>
-                  <p>Vim</p>
+                  <p>Vim / Neovim / Tmux</p>
                   <p>LaTeX</p>
                 </div>
               </div>
 
               <h1 class="interests">Interests</h1>
-              <div class="contact interests"><p>Coffee / cooking</p>
-                <p>Free Software / self-hosting</p>
+              <div class="contact interests"><p>Free Software / self-hosting</p>
+                <p>Coffee / cooking</p>
                 <p>Mechanical keyboards</p>
                 <p>Gaming</p>
                 <p>Formula 1</p></div>
