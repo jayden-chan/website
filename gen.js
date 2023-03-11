@@ -10,6 +10,13 @@ function e(text) {
     .replace(/'/g, "&#039;");
 }
 
+const DEFAULT_CSS = `<link rel="stylesheet" href="/styles/font.css" />
+    <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="stylesheet" href="/styles/print.css" media="print" />
+    <link rel="stylesheet" href="/styles/lg.css" media="only screen and (max-width: 1500px)" />
+    <link rel="stylesheet" href="/styles/md.css" media="only screen and (max-width: 1200px)" />
+    <link rel="stylesheet" href="/styles/sm.css" media="only screen and (max-width: 1000px)" />`;
+
 const resume = JSON.parse(
   readFileSync("./content/resume.json", { encoding: "utf8" })
 );
@@ -85,7 +92,17 @@ const renderAward = (award) => {
               </div>`;
 };
 
+templateReplace(join(renderDir, "pgp", "index.html"), {
+  "{{ css }}": DEFAULT_CSS,
+});
+templateReplace(join(renderDir, "ssh", "index.html"), {
+  "{{ css }}": DEFAULT_CSS,
+});
+templateReplace(join(renderDir, "index.html"), {
+  "{{ css }}": DEFAULT_CSS,
+});
 templateReplace(join(renderDir, "resume", "index.html"), {
+  "{{ css }}": DEFAULT_CSS,
   "{{ exp }}": resume.experience
     .map((e) => renderExp(e))
     .join("\n              "),
