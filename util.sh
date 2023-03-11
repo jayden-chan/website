@@ -4,8 +4,10 @@ function render_website () {
     echo "[$(date)] Rendering website"
     rm -rf "$1"
     mkdir -p "$1"/fontawesome
+    mkdir -p "$1"/fonts
     cp -r ./src/* "$1"
     cp -r ./vendor/fa/* "$1"/fontawesome/
+    cp -r ./vendor/Heebo "$1"/fonts/
     node --unhandled-rejections=strict gen.js "$1"
     purgecss --css "$1"/fontawesome/css/*.css --content "$1"/**/*.html --output "$1"/fontawesome/css/
     purgecss --css "$1"/styles/*.css          --content "$1"/**/*.html --output "$1"/styles/
