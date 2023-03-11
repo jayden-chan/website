@@ -3,17 +3,13 @@
 }
 
 body {
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 1.5vmin);
 }
 
 .container {
   max-width: 100%;
   margin-left: 1em;
   margin-right: 1em;
-}
-
-.homelink {
-  font-size: x-large;
 }
 
 .exprow {
