@@ -1,49 +1,22 @@
 {
-  "interests": [
-    "Free Software / self-hosting",
-    "Coffee / cooking",
-    "Mechanical keyboards",
-    "Gaming",
-    "Formula 1"
-  ],
-  "awards": [
-    {
-      "desc": "Western Engineering Competition (Programming)",
-      "print": true,
-      "result": "Winner",
-      "time": "2020"
-    },
-    {
-      "desc": "UVic Engineering Competition (Programming)",
-      "print": true,
-      "result": "Winner",
-      "time": "2018, 2019"
-    },
-    {
-      "desc": "UVic ENGR 120 Design Competition",
-      "print": true,
-      "result": "Winner",
-      "time": "2018"
-    },
-    {
-      "desc": "Western Canada Regional Robotics Competition",
-      "print": true,
-      "result": "Winner",
-      "time": "2016"
-    },
-    {
-      "desc": "China Robotics Challenge",
-      "print": false,
-      "result": "Winner",
-      "time": "2016"
-    },
-    {
-      "desc": "Western Canada Regional Robotics Competition",
-      "print": false,
-      "result": "Innovation in Control Award",
-      "time": "2015, 2016"
-    }
-  ],
+  "skills": {
+    "lang": [
+      "TypeScript / JavaScript",
+      "Go",
+      "Rust",
+      "C / C++",
+      "HTML / CSS / SCSS"
+    ],
+    "tech": [
+      "Kubernetes / Docker",
+      "Helm / Kustomize / FluxCD",
+      "React / React Native",
+      "NGINX",
+      "PostgreSQL",
+      "REST / GraphQL"
+    ],
+    "tools": ["Git", "Linux", "Vim / Neovim / Tmux", "LaTeX"]
+  },
   "experience": [
     {
       "company": "SaaSquatch",
@@ -186,22 +159,49 @@
       ]
     }
   ],
-  "skills": {
-    "lang": [
-      "TypeScript / JavaScript",
-      "Go",
-      "Rust",
-      "C / C++",
-      "HTML / CSS / SCSS"
-    ],
-    "tech": [
-      "Kubernetes / Docker",
-      "Helm / Kustomize / FluxCD",
-      "React / React Native",
-      "NGINX",
-      "PostgreSQL",
-      "REST / GraphQL"
-    ],
-    "tools": ["Git", "Linux", "Vim / Neovim / Tmux", "LaTeX"]
-  }
+  "awards": [
+    {
+      "desc": "Western Engineering Competition (Programming)",
+      "print": true,
+      "result": "Winner",
+      "time": "2020"
+    },
+    {
+      "desc": "UVic Engineering Competition (Programming)",
+      "print": true,
+      "result": "Winner",
+      "time": "2018, 2019"
+    },
+    {
+      "desc": "UVic ENGR 120 Design Competition",
+      "print": true,
+      "result": "Winner",
+      "time": "2018"
+    },
+    {
+      "desc": "Western Canada Regional Robotics Competition",
+      "print": true,
+      "result": "Winner",
+      "time": "2016"
+    },
+    {
+      "desc": "China Robotics Challenge",
+      "print": false,
+      "result": "Winner",
+      "time": "2016"
+    },
+    {
+      "desc": "Western Canada Regional Robotics Competition",
+      "print": false,
+      "result": "Innovation in Control Award",
+      "time": "2015, 2016"
+    }
+  ],
+  "interests": [
+    "Free Software / self-hosting",
+    "Coffee / cooking",
+    "Mechanical keyboards",
+    "Gaming",
+    "Formula 1"
+  ]
 }
