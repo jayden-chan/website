@@ -54,7 +54,7 @@ const resume = yamlParse(
   Deno.readTextFileSync("./content/resume.yaml")
 ) as Resume;
 
-const dist = Deno.args[1] ?? "dist";
+const dist = Deno.args[0] ?? "dist";
 
 const templateReplace = (
   path: string,

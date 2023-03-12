@@ -14,7 +14,7 @@ function render_website () {
 }
 
 if [ "$1" = "render" ]; then
-    render_website ./dist
+    render_website "${2:-./dist}"
 fi
 
 if [ "$1" = "dev" ]; then
