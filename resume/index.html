@@ -7,12 +7,7 @@
     <meta name="author" content="Jayden Chan" />
     <meta name="description" content="Resume - Jayden Chan" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="/styles/font.css" />
-    <link rel="stylesheet" href="/styles/index.css" />
-    <link rel="stylesheet" href="/styles/print.css" media="print" />
-    <link rel="stylesheet" href="/styles/lg.css" media="only screen and (max-width: 1500px)" />
-    <link rel="stylesheet" href="/styles/md.css" media="only screen and (max-width: 1200px)" />
-    <link rel="stylesheet" href="/styles/sm.css" media="only screen and (max-width: 1000px)" />
+    {{ css }}
     <link rel="stylesheet" href="/fontawesome/css/fontawesome.min.css" />
     <link rel="stylesheet" href="/fontawesome/css/brands.min.css" />
     <link rel="stylesheet" href="/fontawesome/css/solid.min.css" />
@@ -27,196 +22,11 @@
             <div class="rescol1">
               <h1>Experience</h1>
 
-              <div class="exp">
-                <div class="exprow">
-                  <h2><a href="https://www.saasquatch.com">SaaSquatch</a></h2>
-                  <h3 class="nomobile">
-                    <i class="fa-solid fa-location-dot"></i>Victoria, Canada
-                  </h3>
-                </div>
-                <div class="exprow">
-                  <h4>Software Engineer</h4>
-                  <h4>Jan 2019 - Apr 2020, Aug 2022 - present</h4>
-                </div>
-                <div class="expdesc">
-                  <ul>
-                    <li>Currently working on backend, infrastructure, and DevOps teams</li>
-                    <li>Spearheaded the adoption of containerization technology at SaaSquatch, specifically Docker and Kubernetes (GKE)</li>
-                    <li>Developed core logic for the SaaSquatch Growth Automation platform with using Express, Heroku, and Contentful</li>
-                    <li>Implemented a new frontend build process from scratch using Babel &amp; Webpack, adding TypeScript support and cutting build times in half</li>
-                    <li>Helped migrate the SaaSquatch analytics backend from Keen to BigQuery, including a custom query server to translate Keen API calls into BigQuery SQL</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="exp">
-                <div class="exprow">
-                  <h2><a href="https://www.dyspatch.io/">Dyspatch</a></h2>
-                  <h3 class="nomobile">
-                    <i class="fa-solid fa-location-dot"></i>Victoria, Canada
-                  </h3>
-                </div>
-                <div class="exprow">
-                  <h4>Software Developer</h4>
-                  <h4>Sep 2021 - Apr 2022</h4>
-                </div>
-                <div class="expdesc">
-                  <ul>
-                    <li>Implemented an improved version of Dyspatch&#039;s internal one-click Kubernetes deployment &amp; monitoring tool</li>
-                    <li>Connected Rancher, GitHub, S3, DynamoDB, and Slack APIs for a cohesive and polished deployment experience</li>
-                    <li>Reverse engineered Rancher CLI to enable making Kubernetes deployments through their un-documented API</li>
-                    <li>Implemented high-availability distributed GraphQL subscriptions with Apollo and Redis</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="exp">
-                <div class="exprow">
-                  <h2><a href="https://lc.dev">Launchcode</a></h2>
-                  <h3 class="nomobile">
-                    <i class="fa-solid fa-location-dot"></i>Calgary, Canada
-                  </h3>
-                </div>
-                <div class="exprow">
-                  <h4>Software Developer</h4>
-                  <h4>Sep 2020 - Apr 2021</h4>
-                </div>
-                <div class="expdesc">
-                  <ul>
-                    <li>Developed core business logic for the PatronScan ID Scanner product</li>
-                    <li>Implemented a faster and more reliable ID detection algorithm using OpenCV and Rust</li>
-                    <li>Built a responsive web frontend for Launchcode&#039;s &quot;Enjoyn&quot; product using React &amp; Chakra</li>
-                    <li>Implemented core video and audio conferencing features for the Enjoyn Android app</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="exp donotprint">
-                <div class="exprow">
-                  <h2>Bickert Robotics</h2>
-                  <h3 class="nomobile">
-                    <i class="fa-solid fa-location-dot"></i>Calgary, Canada
-                  </h3>
-                </div>
-                <div class="exprow">
-                  <h4>Robotics Software Technician</h4>
-                  <h4>Apr 2018 - Sep 2018</h4>
-                </div>
-                <div class="expdesc">
-                  <ul>
-                    <li>Developed a software suite to power Bickert Robotics&#039; automated bartender robot</li>
-                    <li>Implemented a REST API using Go and PostgreSQL for managing drink recipes, ingredients, robot configurations, and customer credentials</li>
-                    <li>Developed an Android app for directly controlling the robot using Java and the Android SDK</li>
-                    <li>Designed a web app for viewing / editing drinks, users, and tanks using React. Included page for viewing the drink queue on the robot&#039;s embedded display</li>
-                    <li>Wrote embedded Python code to receive user input and autonomously pour drinks based on JSON recipe data</li>
-                  </ul>
-                </div>
-              </div>
+              {{ exp }}
 
               <h1>Projects</h1>
 
-              <div class="exp project">
-                <div class="projrow">
-                  <h2>
-                    <a href="https://github.com/jayden-chan/pipewire-orchestrator"
-                      >PipeWire Orchestrator <i class="fa-brands fa-github"></i
-                    ></a>
-                  </h2>
-                  <h3>2022</h3>
-                </div>
-                <h4>TypeScript</h4>
-                <ul>
-                  <li>PipeWire Orchestrator is a background daemon that performs several audio and MIDI-related tasks on Linux</li>
-                  <li>Performs MIDI processing and mapping based on configuration rules</li>
-                  <li>Provides PipeWire connection graph monitoring tools and rules</li>
-                  <li>Implements basic JACK LV2 plugin host functionality</li>
-                  <li>Configured with either JSON or YAML including automatic runtime validation</li>
-                </ul>
-              </div>
-              <div class="exp project">
-                <div class="projrow">
-                  <h2>
-                    <a href="https://github.com/jayden-chan/puggies"
-                      >puggies <i class="fa-brands fa-github"></i
-                    ></a>
-                  </h2>
-                  <h3>2022</h3>
-                </div>
-                <h4>Go / React</h4>
-                <ul>
-                  <li>Puggies is a self-hosted CS:GO demo analyzer and statistics platform</li>
-                  <li>Automatically parses CS:GO demos to extract statistics such as k/a/d, K/D, ADR, HS%, HLTV, RWS and many more</li>
-                  <li>Supports demos from Valve MM, FACEIT, ESEA, and pugsetup</li>
-                  <li>Uses docker-first containerized deployment method for easy setup and upgrades</li>
-                  <li>Includes a beautiful and fast interface designed with React and Chakra</li>
-                </ul>
-              </div>
-              <div class="exp project">
-                <div class="projrow">
-                  <h2>
-                    <a href="https://github.com/jayden-chan/bblp"
-                      >bblp <i class="fa-brands fa-github"></i
-                    ></a>
-                  </h2>
-                  <h3>2021</h3>
-                </div>
-                <h4>Rust</h4>
-                <ul>
-                  <li>bblp is an implementation of the Revised Simplex Method for solving Linear Programs</li>
-                  <li>Uses the linear algebraic Revised Simplex Method for computing an optimal solution to a linear function and set of constraints</li>
-                  <li>Includes both primal and dual solvers with the two-phase primal-dual method for initially-infeasible problems</li>
-                  <li>Implements the largest coefficient pivoting rule with lexicographic perturbation for cycle avoidance</li>
-                </ul>
-              </div>
-              <div class="exp project">
-                <div class="projrow">
-                  <h2>
-                    <a href="https://github.com/jayden-chan/nit"
-                      >nit <i class="fa-brands fa-github"></i
-                    ></a>
-                  </h2>
-                  <h3>2019</h3>
-                </div>
-                <h4>Rust</h4>
-                <ul>
-                  <li>Nit is a physically-based raytracer built with Rust</li>
-                  <li>Uses a Monte-Carlo path-tracing approach to rendering realistic scenes based on the physical properties of light</li>
-                  <li>Implements a sub-linear collision detection algorithm with a Bounding-Volume Hierarchy</li>
-                  <li>Supports loading polygon meshes from STL files</li>
-                  <li>Parallelized across any number of CPU cores</li>
-                </ul>
-              </div>
-              <div class="exp project donotprint">
-                <div class="projrow">
-                  <h2>
-                    <a href="https://github.com/jayden-chan/battlesnake-2020"
-                      >Battlesnake <i class="fa-brands fa-github"></i
-                    ></a>
-                  </h2>
-                  <h3>2019-2020</h3>
-                </div>
-                <h4>Rust / Go</h4>
-                <ul>
-                  <li>Developed an artificial intelligence to compete in the Battlesnake programming competition</li>
-                  <li>Uses parallel Monte-Carlo Tree Search for assessing future game states</li>
-                  <li>Implemented a variety of other common algorithms for use in the Monte-Carlo rollout phase</li>
-                  <li>Created a moving-average analyzer to match other snakes&#039; behavior to a profile</li>
-                </ul>
-              </div>
-              <div class="exp project donotprint">
-                <div class="projrow">
-                  <h2>
-                    <a href="https://github.com/jayden-chan/ENGR120-Vex"
-                      >UVic ENGR 120 Design Project <i class="fa-brands fa-github"></i
-                    ></a>
-                  </h2>
-                  <h3>2018</h3>
-                </div>
-                <h4>C</h4>
-                <ul>
-                  <li>Designed and built a small prototype robot for connecting wires on the ocean floor</li>
-                  <li>Created and programmed a rotating photosensor mechanism to detect the attachment point</li>
-                  <li>Implemented PID and slew rate controllers for quickly and smoothly driving to the attachment point</li>
-                  <li>Placed 1st in a course-wide competition with an average connection time of 5.99 seconds</li>
-                </ul>
-              </div>
+              {{ proj }}
 
               <h1 class="education">Education</h1>
 
@@ -233,48 +43,7 @@
 
               <h1 class="awards">Awards</h1>
 
-              <div class="exp award">
-                <div class="projrow">
-                  <h2>Winner</h2>
-                  <h3>2020</h3>
-                </div>
-                <h4>Western Engineering Competition (Programming)</h4>
-              </div>
-              <div class="exp award">
-                <div class="projrow">
-                  <h2>Winner</h2>
-                  <h3>2018, 2019</h3>
-                </div>
-                <h4>UVic Engineering Competition (Programming)</h4>
-              </div>
-              <div class="exp award">
-                <div class="projrow">
-                  <h2>Winner</h2>
-                  <h3>2018</h3>
-                </div>
-                <h4>UVic ENGR 120 Design Competition</h4>
-              </div>
-              <div class="exp award">
-                <div class="projrow">
-                  <h2>Winner</h2>
-                  <h3>2016</h3>
-                </div>
-                <h4>Western Canada Regional Robotics Competition</h4>
-              </div>
-              <div class="exp award">
-                <div class="projrow">
-                  <h2>Winner</h2>
-                  <h3>2016</h3>
-                </div>
-                <h4>China Robotics Challenge</h4>
-              </div>
-              <div class="exp award">
-                <div class="projrow">
-                  <h2>Innovation in Control Award</h2>
-                  <h3>2015, 2016</h3>
-                </div>
-                <h4>Western Canada Regional Robotics Competition</h4>
-              </div>
+              {{ awards }}
             </div>
             <div class="rescol2">
               <h1>Contact</h1>
@@ -311,38 +80,22 @@
               <div class="contact skills">
                 <div class="skillblock">
                   <h2>Languages</h2>
-                  <p>TypeScript / JavaScript</p>
-                  <p>Go</p>
-                  <p>Rust</p>
-                  <p>C / C++</p>
-                  <p>HTML / CSS / SCSS</p>
+                  {{ langs }}
                 </div>
 
                 <div class="skillblock">
                   <h2>Technologies</h2>
-                  <p>Kubernetes / Docker</p>
-                  <p>Helm / Kustomize / FluxCD</p>
-                  <p>React / React Native</p>
-                  <p>NGINX</p>
-                  <p>PostgreSQL</p>
-                  <p>REST / GraphQL</p>
+                  {{ tech }}
                 </div>
 
                 <div class="skillblock nomobile">
                   <h2>Tools</h2>
-                  <p>Git</p>
-                  <p>Linux</p>
-                  <p>Vim / Neovim / Tmux</p>
-                  <p>LaTeX</p>
+                  {{ tools }}
                 </div>
               </div>
 
               <h1 class="interests">Interests</h1>
-              <div class="contact interests"><p>Free Software / self-hosting</p>
-                <p>Coffee / cooking</p>
-                <p>Mechanical keyboards</p>
-                <p>Gaming</p>
-                <p>Formula 1</p></div>
+              <div class="contact interests">{{ interests }}</div>
             </div>
           </div>
         </div>

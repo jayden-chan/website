@@ -15,10 +15,6 @@ body {
   padding: calc(var(--outer-padding) / 2);
 }
 
-.project {
-  margin-bottom: 1rem;
-}
-
 .container {
   max-width: 100%;
   padding-top: 1rem;
@@ -30,28 +26,6 @@ body {
 
 .rescol2 {
   min-width: 25%;
-}
-
-.expdesc ul {
-  padding-left: 0;
-  margin-left: 0;
-}
-
-.expdesc ul li {
-  margin-left: 1em;
-}
-
-.project ul {
-  padding-left: 0;
-  margin-left: 0;
-}
-
-.project ul li {
-  margin-left: 1em;
-}
-
-.award {
-  display: none;
 }
 .awards {
   display: none;

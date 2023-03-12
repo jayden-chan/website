@@ -105,14 +105,6 @@ a {
   margin-bottom: 2rem;
 }
 
-.project {
-  margin-bottom: 2rem;
-}
-
-.award {
-  margin-bottom: 1rem;
-}
-
 .exprow {
   display: flex;
   flex-direction: row;
@@ -138,30 +130,8 @@ a {
   font-weight: bold;
 }
 
-.projrow {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.projrow i {
-  margin-left: 0.5rem;
-}
-
-.projrow h3 {
-  margin: 0;
-  font-weight: normal;
-  font-size: medium;
-}
-
 .exp a {
   text-decoration: none;
-}
-
-.expdesc li {
-  word-break: keep-all;
-  margin-bottom: 0.2rem;
 }
 
 .contact i {
