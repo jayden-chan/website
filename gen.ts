@@ -1,7 +1,40 @@
-const { readFileSync, writeFileSync } = require("fs");
-const { join } = require("path");
+#!/usr/bin/env -S deno run --allow-read --allow-write --no-lock
+import { join } from "https://deno.land/std/path/mod.ts";
+import { parse as yamlParse } from "https://deno.land/std@0.82.0/encoding/yaml.ts";
 
-function e(text) {
+type Resume = {
+  skills: {
+    lang: string[];
+    tech: string[];
+    tools: string[];
+  };
+  experience: {
+    company: string;
+    location: string;
+    print: boolean;
+    roles: string[];
+    time: string;
+    title: string;
+    website: string;
+  }[];
+  projects: {
+    github: string;
+    print: boolean;
+    stack: string;
+    time: string;
+    title: string;
+    roles: string[];
+  }[];
+  awards: {
+    desc: string;
+    print: boolean;
+    result: string;
+    time: string;
+  }[];
+  interests: string[];
+};
+
+function e(text: string) {
   return text
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
@@ -17,25 +50,26 @@ const DEFAULT_CSS = `<link rel="stylesheet" href="/styles/font.css" />
     <link rel="stylesheet" href="/styles/md.css" media="only screen and (max-width: 1200px)" />
     <link rel="stylesheet" href="/styles/sm.css" media="only screen and (max-width: 1000px)" />`;
 
-const resume = JSON.parse(
-  readFileSync("./content/resume.json", { encoding: "utf8" })
-);
+const resume = yamlParse(
+  Deno.readTextFileSync("./content/resume.yaml")
+) as Resume;
 
-const renderDir = process.argv[2] ?? "dist";
+const dist = Deno.args[1] ?? "dist";
 
-const templateReplace = (path, replacements) => {
-  let file = readFileSync(path, {
-    encoding: "utf8",
-  });
+const templateReplace = (
+  path: string,
+  replacements: Record<string, string>
+) => {
+  let file = Deno.readTextFileSync(path);
 
   Object.entries(replacements).forEach(([key, val]) => {
     file = file.replace(key, val);
   });
 
-  writeFileSync(path, file);
+  Deno.writeTextFileSync(path, file);
 };
 
-const renderExp = (exp) => {
+const renderExp = (exp: Resume["experience"][0]) => {
   if (exp.roles === undefined) {
     console.error(exp);
     throw new Error("undef");
@@ -65,7 +99,7 @@ ${exp.roles.map((r) => `${" ".repeat(20)}<li>${e(r)}</li>`).join("\n")}
               </div>`;
 };
 
-const renderProject = (proj) => {
+const renderProject = (proj: Resume["projects"][0]) => {
   return `<div class="exp project${proj.print ? "" : " donotprint"}">
                 <div class="projrow">
                   <h2>
@@ -82,7 +116,7 @@ ${proj.roles.map((r) => `${" ".repeat(18)}<li>${e(r)}</li>`).join("\n")}
               </div>`;
 };
 
-const renderAward = (award) => {
+const renderAward = (award: Resume["awards"][0]) => {
   return `<div class="exp award">
                 <div class="projrow">
                   <h2>${e(award.result)}</h2>
@@ -92,35 +126,35 @@ const renderAward = (award) => {
               </div>`;
 };
 
-templateReplace(join(renderDir, "pgp", "index.html"), {
-  "{{ css }}": DEFAULT_CSS,
-});
-templateReplace(join(renderDir, "ssh", "index.html"), {
-  "{{ css }}": DEFAULT_CSS,
-});
-templateReplace(join(renderDir, "index.html"), {
-  "{{ css }}": DEFAULT_CSS,
-});
-templateReplace(join(renderDir, "resume", "index.html"), {
+templateReplace(join(dist, "pgp", "index.html"), { "{{ css }}": DEFAULT_CSS });
+templateReplace(join(dist, "ssh", "index.html"), { "{{ css }}": DEFAULT_CSS });
+templateReplace(join(dist, "index.html"), { "{{ css }}": DEFAULT_CSS });
+templateReplace(join(dist, "resume", "index.html"), {
   "{{ css }}": DEFAULT_CSS,
   "{{ exp }}": resume.experience
     .map((e) => renderExp(e))
     .join("\n              "),
+
   "{{ proj }}": resume.projects
     .map((p) => renderProject(p))
     .join("\n              "),
+
   "{{ awards }}": resume.awards
     .map((a) => renderAward(a))
     .join("\n              "),
+
   "{{ langs }}": resume.skills.lang
     .map((l) => `<p>${e(l)}</p>`)
     .join("\n" + " ".repeat(18)),
+
   "{{ tech }}": resume.skills.tech
     .map((t) => `<p>${e(t)}</p>`)
     .join("\n" + " ".repeat(18)),
+
   "{{ tools }}": resume.skills.tools
     .map((t) => `<p>${e(t)}</p>`)
     .join("\n" + " ".repeat(18)),
+
   "{{ interests }}": resume.interests
     .map((i) => `<p>${e(i)}</p>`)
     .join("\n" + " ".repeat(16)),
