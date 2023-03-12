@@ -17,6 +17,29 @@ body {
   align-items: flex-start;
 }
 
+.expdesc ul {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.expdesc ul li {
+  margin-left: 1em;
+}
+
+.project ul {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.project ul li {
+  margin-left: 1em;
+}
+
+.projrow {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .resume {
   flex-direction: column-reverse;
 }
