@@ -1,6 +1,6 @@
 #!/usr/bin/env -S deno run --allow-read --allow-write --no-lock
-import { join } from "https://deno.land/std/path/mod.ts";
-import { parse as yamlParse } from "https://deno.land/std@0.82.0/encoding/yaml.ts";
+import { join } from "https://deno.land/std@0.179.0/path/mod.ts";
+import { parse as yamlParse } from "https://deno.land/std@0.179.0/encoding/yaml.ts";
 
 type Resume = {
   skills: {
