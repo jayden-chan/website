@@ -7,8 +7,10 @@ skills:
     - HTML / CSS / SCSS
   tech:
     - Kubernetes / Docker
-    - Helm / Kustomize / FluxCD
+    - Pulumi / Terraform
+    - Google Cloud / GKE
     - React / React Native
+    - GitHub Actions / Jenkins
     - NGINX
     - PostgreSQL
     - REST / GraphQL
