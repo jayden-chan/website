@@ -1,6 +1,7 @@
-#!/usr/bin/env -S deno run --allow-read --allow-write --no-lock
-import { join } from "https://deno.land/std@0.179.0/path/mod.ts";
-import { parse as yamlParse } from "https://deno.land/std@0.179.0/encoding/yaml.ts";
+#!/usr/bin/env -S bun run
+import { join } from "path";
+import yaml from "js-yaml";
+import { readFileSync, writeFileSync } from "fs";
 
 type Resume = {
   skills: {
@@ -50,23 +51,23 @@ const DEFAULT_CSS = `<link rel="stylesheet" href="/styles/font.css" />
     <link rel="stylesheet" href="/styles/md.css" media="only screen and (max-width: 1200px)" />
     <link rel="stylesheet" href="/styles/sm.css" media="only screen and (max-width: 1000px)" />`;
 
-const resume = yamlParse(
-  Deno.readTextFileSync("./content/resume.yaml")
+const resume = yaml.load(
+  readFileSync("./content/resume.yaml", { encoding: "utf8" })
 ) as Resume;
 
-const dist = Deno.args[0] ?? "dist";
+const dist = process.argv[2] ?? "dist";
 
 const templateReplace = (
   path: string,
   replacements: Record<string, string>
 ) => {
-  let file = Deno.readTextFileSync(path);
+  let file = readFileSync(path, { encoding: "utf8" });
 
   Object.entries(replacements).forEach(([key, val]) => {
     file = file.replace(key, val);
   });
 
-  Deno.writeTextFileSync(path, file);
+  writeFileSync(path, file);
 };
 
 const renderExp = (exp: Resume["experience"][0]) => {
