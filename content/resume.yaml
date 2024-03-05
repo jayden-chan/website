@@ -21,13 +21,14 @@ skills:
     - LaTeX
 
 experience:
-  - company: SaaSquatch
+  - company: impact.com
     location: Victoria, Canada
     print: true
     time: Jan 2019 - Apr 2020, Aug 2022 - present
     title: Software Engineer
-    website: https://www.saasquatch.com
+    website: https://impact.com
     roles:
+      - Formerly SaaSquatch, acquired by impact.com in May 2023
       - Currently working on backend, infrastructure, and DevOps teams
       - Spearheaded the adoption of containerization technology at SaaSquatch, specifically
         Docker and Kubernetes (GKE)
