@@ -1,6 +1,6 @@
 # website
 
-My personal website. Pure HTML/CSS with a little bit of automation from Deno. Zero
+My personal website. Pure HTML/CSS with a little bit of automation from Bun. Zero
 JavaScript.
 
 ### Build
