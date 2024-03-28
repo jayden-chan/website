@@ -1,6 +1,7 @@
 :root {
   --bg-main: #101010;
   --fg-main: #ffffff;
+  --fg-dim: #777777;
   --pre-color: #dadada;
   --outer-padding: 0rem;
 }
@@ -13,6 +14,7 @@ body {
 
   font-family: "Heebo";
   font-weight: 300;
+  font-size: calc(10px + 0.8vmin);
 }
 
 h1 {
@@ -36,6 +38,10 @@ h1 {
 .nomargin {
   margin: 0;
   padding: 0;
+}
+
+.no-text-decor {
+  text-decoration: none;
 }
 
 h2 {
@@ -192,4 +198,5 @@ a {
 
 pre {
   color: var(--pre-color);
+  font-size: calc(9px + 0.8vmin);
 }

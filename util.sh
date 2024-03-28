@@ -8,9 +8,23 @@ function render_website () {
     cp -r ./src/* "$1"
     cp -r ./vendor/fa/* "$1"/fontawesome/
     cp -r ./vendor/Heebo "$1"/fonts/
+
     ./gen.ts "$1"
-    purgecss --css "$1"/fontawesome/css/*.css --content "$1"/**/*.html --output "$1"/fontawesome/css/
-    purgecss --css "$1"/styles/*.css          --content "$1"/**/*.html --output "$1"/styles/
+
+    purgecss --css "$1"/fontawesome/css/*.css --content "$1"/**/*.html --output "$1"/fontawesome/css/ &
+    purgecss --css "$1"/styles/*.css          --content "$1"/**/*.html --output "$1"/styles/ &
+    wait
+
+    for f in $(ls "$1"/fontawesome/css/*.css); do
+        csso "$f" --output "$f" &
+    done
+
+    for f in $(ls "$1"/styles/*.css); do
+        csso "$f" --output "$f" &
+    done
+
+    wait
+    echo "[$(date)] Finished rendering"
 }
 
 if [ "$1" = "render" ]; then
@@ -18,11 +32,11 @@ if [ "$1" = "render" ]; then
 fi
 
 if [ "$1" = "dev" ]; then
-    while sleep 0.1; do fd . src content | entr -d ./util.sh render; done
+    while sleep 0.1; do fd . | entr -d ./util.sh render; done
 fi
 
 if [ "$1" = "serve" ]; then
-    python -m http.server 3000 --directory dist
+    python -m http.server 4334 --directory dist
 fi
 
 if [ "$1" = "deploy" ]; then
