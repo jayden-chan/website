@@ -138,7 +138,6 @@ async function main() {
     "{{ tools }}": resume.skills.tools.map((t) => `<p>${e(t)}</p>`).join("\n"),
     "{{ interests }}": resume.interests.map((i) => `<p>${e(i)}</p>`).join("\n"),
   });
-
 }
 
 main();

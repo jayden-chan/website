@@ -2,24 +2,25 @@
 
 function render_website () {
     echo "[$(date)] Rendering website"
-    rm -rf "$1"
-    mkdir -p "$1"/fontawesome
-    mkdir -p "$1"/fonts
-    cp -r ./src/* "$1"
-    cp -r ./vendor/fa/* "$1"/fontawesome/
-    cp -r ./vendor/Heebo "$1"/fonts/
+    dist="$(realpath "$1")"
+    rm -rf "$dist"
+    mkdir -p "$dist"/fontawesome
+    mkdir -p "$dist"/fonts
+    cp -r ./src/* "$dist"
+    cp -r ./vendor/fa/* "$dist"/fontawesome/
+    cp -r ./vendor/Heebo "$dist"/fonts/
 
-    ./gen.ts "$1"
+    ./generator/index.ts "$(realpath "$dist")"
 
-    purgecss --css "$1"/fontawesome/css/*.css --content "$1"/**/*.html --output "$1"/fontawesome/css/ &
-    purgecss --css "$1"/styles/*.css          --content "$1"/**/*.html --output "$1"/styles/ &
+    purgecss --css "$dist"/fontawesome/css/*.css --content "$dist"/**/*.html --output "$dist"/fontawesome/css/ &
+    purgecss --css "$dist"/styles/*.css          --content "$dist"/**/*.html --output "$dist"/styles/ &
     wait
 
-    for f in $(ls "$1"/fontawesome/css/*.css); do
+    for f in $(ls "$dist"/fontawesome/css/*.css); do
         csso "$f" --output "$f" &
     done
 
-    for f in $(ls "$1"/styles/*.css); do
+    for f in $(ls "$dist"/styles/*.css); do
         csso "$f" --output "$f" &
     done
 
