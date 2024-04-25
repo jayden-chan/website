@@ -34,8 +34,6 @@ experience:
         Docker and Kubernetes (GKE)
       - Developed core logic for the SaaSquatch Growth Automation platform with using
         Express, Heroku, and Contentful
-      - Implemented a new frontend build process from scratch using Babel & Webpack, adding
-        TypeScript support and cutting build times in half
       - Helped migrate the SaaSquatch analytics backend from Keen to BigQuery, including
         a custom query server to translate Keen API calls into BigQuery SQL
 
